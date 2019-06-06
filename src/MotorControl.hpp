@@ -1,3 +1,8 @@
+//  TH-OWL, Bachelor Technische Informatik, 4. Semester, Projektarbeit Prof. Korte
+//  Authors: A. Niggemann, J. Illigens, P. Tadday
+//  Date: 02.05.2019
+
+
 #define MOTORSHIELD_IN1  5
 #define MOTORSHIELD_IN2 6
 #define MOTORSHIELD_IN3 7
@@ -7,14 +12,20 @@
 #define ACTIVATION_THRESHHOLD 30
 #define DEACTIVATION_THRESHHOLD 15
 
+//definitions for vscode, can be deleted for arduino
+#define uint8_t char
+#define abs(s) (s < 0 ? -s : s)
+
 enum Movement {Forward, Standing, Backwards};
 
 
 class Motor{
   public:
-  Motor(uint8_t, uint8_t,uint8_t);
+
+  Motor(uint8_t analog, uint8_t digital1, uint8_t digital2);
   void drive(int speed);
   
+  private:
   uint8_t analog;
   uint8_t digital1;
   uint8_t digital2;
@@ -23,10 +34,10 @@ class Motor{
   Movement direction;
   
 };
-Motor::Motor(uint8_t analog1, uint8_t digital11, uint8_t digital21){
-  this->analog = analog11;
-  this->digital1 = digital111;
-  this->digital2 = digital211;
+Motor::Motor(uint8_t analog, uint8_t digital1, uint8_t digital2){
+  this->analog = analog;
+  this->digital1 = digital1;
+  this->digital2 = digital2;
 }
 
 
@@ -67,13 +78,6 @@ class MotorControl
 };
 
 MotorControl::MotorControl(Motor* left, Motor* right){
-  Serial.println("Surprise motherfucker");
-  Serial.println(left->analog);
-  Serial.println(left->digital1);
-  Serial.println(left->digital2);
-  Serial.println(right->analog);
-  Serial.println(right->digital1);
-  Serial.println(right->digital2);
   
   this->left = left;
   this->right = right;

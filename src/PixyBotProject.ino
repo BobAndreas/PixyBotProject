@@ -2,10 +2,9 @@
 //  Authors: A. Niggemann, J. Illigens, P. Tadday
 //  Date: 02.05.2019
 
-#include "PID.h"
-#include "MotorControl.h"
-#include "Pixy2\Pixy2.h"
-#include "Pixy2\Pixy2CCC.h"
+#include "PID.hpp"
+#include "MotorControl.hpp"
+#include "Helpers.cpp"
 
 enum State {Waiting, Searching, Following};
 
@@ -57,7 +56,7 @@ void setup()
 
   lastValid = false;
   Serial.begin(9600);
-  for(int i = 5; i < 11; i++)pinMode(i, OUTPUT);
+  for(int i = 5; i < 11; i++) pinMode(i, OUTPUT);
   ////Serial.print("Starting...\n");
   pixyCore.init();
 
@@ -215,33 +214,9 @@ void searching() {
   delay(500);
 
 }
-void printBlock(Block* block) {
-  //Serial print single values
-  //Print signature
-  //Serial.print("Signature = ");
-  //Serial.println(block->m_signature);
 
-  //print x position
-  Serial.print("x = ");
-  Serial.println(block->m_x);
 
-  //print y position
-  //Serial.print("y = ");
-  //Serial.println(block->m_y);
-
-  //print tha wirdth of the object
-  Serial.print("width = ");
-  Serial.println(block->m_width);
-
-  //print the height of the object
-  Serial.print("height = ");
-  Serial.println(block->m_height);
-
-  Serial.print("perceived size = ");
-  Serial.println(max(block->m_height, block->m_width));
-}
-
-Block findBlockRepresentation(int16_t blockcount, Block* blocks) {
+Block findSingleBlockRepresentation(int16_t blockcount, Block* blocks) {
   int16_t maxSize, index;
   maxSize = -1;
   for (int i = 0; i < blockcount; i++) {
@@ -255,21 +230,4 @@ Block findBlockRepresentation(int16_t blockcount, Block* blocks) {
 }
 
 
-int16_t combine(int16_t prop1, int16_t prop2) {
-  return (prop1 * 2 + prop2) / 3;
-}
 
-Block fusion(Block* current, Block* last) {
-  Block combined;
-  combined.m_x = combine(current->m_x, last->m_x);
-  combined.m_y = combine(current->m_y, last->m_y);
-  combined.m_width = combine(current->m_width, last->m_width);
-  combined.m_height = combine(current->m_height, last->m_height);
-  return combined;
-}
-
-int16_t CalcSpeed(int width, int height) {
-  int perceivedsize = max(height, width);
-  return -(SpeedController->next(perceivedsize));
-
-}
