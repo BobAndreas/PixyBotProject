@@ -57,7 +57,7 @@ void setup()
   lastValid = false;
   Serial.begin(9600);
   for(int i = 5; i < 11; i++) pinMode(i, OUTPUT);
-  ////Serial.print("Starting...\n");
+  ////print("Starting...\n");
   pixyCore.init();
 
   TiltController = new PID(PID_Config{
@@ -128,15 +128,15 @@ void loop()
   
   switch (state) {
     case Searching:
-      Serial.println("Searching");
+      println("Searching");
       searching();
       break;
     case Following:
-      Serial.println("Following");
+      println("Following");
       following(blocks);
       break;
     case Waiting:
-      Serial.println("Waiting");
+      println("Waiting");
       waiting();
         break;
     }
@@ -155,7 +155,7 @@ void following(uint16_t blocks) {
   if (lastValid)
     current = fusion(&current, &last);
 
-  ////Serial.println("Combined: ");
+  ////println("Combined: ");
   printBlock(&current);
   x = current.m_x;                    //get x position
   y = current.m_y;                    //get y position
@@ -177,13 +177,13 @@ void following(uint16_t blocks) {
   speedLeft = speedBuff + rotationBuff;
   speedRight = speedBuff - rotationBuff;
   
-  Serial.print("left: ");
-  Serial.println(speedLeft);
-  Serial.print("right: ");
-  Serial.println(speedRight);
-  Serial.print("tilt: ");
-  Serial.println(tilt);
-  Serial.println();
+  print("left: ");
+  println(speedLeft);
+  print("right: ");
+  println(speedRight);
+  print("tilt: ");
+  println(tilt);
+  println();
   motorcontrol.drive(speedLeft, speedRight);
   pixyCore.setServos(500, 500 + tilt);
 
