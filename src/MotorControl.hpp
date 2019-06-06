@@ -12,10 +12,6 @@
 #define ACTIVATION_THRESHHOLD 30
 #define DEACTIVATION_THRESHHOLD 15
 
-//definitions for vscode, can be deleted for arduino
-#define uint8_t char
-#define abs(s) (s < 0 ? -s : s)
-
 enum Movement {Forward, Standing, Backwards};
 
 

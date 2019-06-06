@@ -1,6 +1,14 @@
 //definitions for vscode, can be deleted for arduino
 #define uint8_t char
 #define int16_t int
+
+#ifdef unix
+#include "Pixy2/Pixy2.h"
+#include "Pixy2/Pixy2CCC.h"
+#else
+#include "Pixy2\Pixy2.h"
+#include "Pixy2\Pixy2CCC.h"
+#endif
 #define abs(s) (s < 0 ? -s : s)
 
 int16_t combine(int16_t prop1, int16_t prop2) {
