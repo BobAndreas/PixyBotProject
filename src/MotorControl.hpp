@@ -23,7 +23,7 @@ class Motor{
   Movement direction;
   
 };
-Motor::Motor(uint8_t analog11, uint8_t digital111, uint8_t digital211){
+Motor::Motor(uint8_t analog1, uint8_t digital11, uint8_t digital21){
   this->analog = analog11;
   this->digital1 = digital111;
   this->digital2 = digital211;

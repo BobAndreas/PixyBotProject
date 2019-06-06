@@ -9,17 +9,19 @@
 
 enum State {Waiting, Searching, Following};
 
-MotorControl motorcontrol = MotorControl(new Motor(
-                              SPEEDPIN_B,
-                              MOTORSHIELD_IN4,
-                              MOTORSHIELD_IN3),
-                            new Motor(
-                              SPEEDPIN_A,
-                              MOTORSHIELD_IN1,
-                              MOTORSHIELD_IN2));
+MotorControl motorcontrol = 
+  MotorControl(
+    new Motor(
+      SPEEDPIN_B,
+      MOTORSHIELD_IN4,
+      MOTORSHIELD_IN3),
+    new Motor(
+      SPEEDPIN_A,
+      MOTORSHIELD_IN1,
+      MOTORSHIELD_IN2));
 
 Pixy2 pixyCore;
-Pixy2CCC<Link2SPI> pixy = pixyCore.ccc; //Pixy2CCC<Link2SPI>(&pixyCore);
+Pixy2CCC<Link2SPI> pixy = pixyCore.ccc; 
 
 int signature = 0;    //Nr of signature
 int x = 0;            //positon x axis
