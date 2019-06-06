@@ -1,0 +1,31 @@
+Einleitung
+    Aufgabenstellung
+    Projektbeschreibung
+    Projektumfeld
+Projektplanung
+    Projektphasen
+    Projektressourcen
+        ArduinoMega
+        Shield
+        Motoren
+        Pixy
+    Team-Arbeit
+        Versionsverwaltung
+        Pair Programmin(Vieraugenprinzip, Extreme Programming)
+Analysephase
+    Inspiration von bereits existierender Motrotreiberbibliothek des Herstellers
+    Anforderungsanalyse
+Entwurfsphase
+    Regelungstechnik
+        PID
+    Ansteuerung der Motoren über extra Controller
+    StateMachine // kann man gut mit einem Diagramm darstellen
+
+
+Implementierungsphase
+    C++
+    
+Fazit
+    Soll-/Ist-Vergleich
+    Ausblick
+Quellen
