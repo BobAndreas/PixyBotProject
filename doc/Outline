@@ -14,6 +14,7 @@ Projektplanung
         Pair Programming(Vieraugenprinzip, Extreme Programming)
 Analysephase
     Inspiration von bereits existierender Motrotreiberbibliothek des Herstellers
+    Kennenlernen des Pixy Frameworks(PixyMon)
     Anforderungsanalyse
 Entwurfsphase
     Regelungstechnik
@@ -24,6 +25,7 @@ Entwurfsphase
 
 Implementierungsphase
     C++
+    Signaturvergabe (PixyMon)
     
 Fazit
     Soll-/Ist-Vergleich
