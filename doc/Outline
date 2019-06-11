@@ -18,15 +18,15 @@ Analysephase
     PixyMon Funktionsumfang
     Anforderungsanalyse
 Entwurfsphase
-    Regelungstechnik
+    Regelungstechnik (Tadday)
         PID
-    Ansteuerung der Motoren über extra Controller
+    Ansteuerung der Motoren über extra Controller(Niggemann)
     StateMachine // kann man gut mit einem Diagramm darstellen
 
 
 Implementierungsphase
     C++
-    Signaturvergabe (Prozessbeschreibung)
+    Signaturvergabe (Prozessbeschreibung)(Illigens)
         -PixyMon
         -Per Hardware
     
