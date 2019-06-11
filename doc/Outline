@@ -1,29 +1,34 @@
-Einleitung
+Einleitung (Tadday)
     Aufgabenstellung
     Projektbeschreibung
     Projektumfeld
 Projektplanung
-    Projektphasen
-    Projektressourcen
+    Projektphasen (Illigens)
+    Projektressourcen (Illigens)
         ArduinoMega
         Shield
         Motoren
         Pixy
-    Team-Arbeit
+    Team-Arbeit (Niggemann)
         Versionsverwaltung
         Pair Programming(Vieraugenprinzip, Extreme Programming)
 Analysephase
     Inspiration von bereits existierender Motrotreiberbibliothek des Herstellers
+    Pixy Library Funktionsumfang und Aufbau
+    PixyMon Funktionsumfang
     Anforderungsanalyse
 Entwurfsphase
-    Regelungstechnik
+    Regelungstechnik (Tadday)
         PID
-    Ansteuerung der Motoren über extra Controller
+    Ansteuerung der Motoren über extra Controller(Niggemann)
     StateMachine // kann man gut mit einem Diagramm darstellen
 
 
 Implementierungsphase
     C++
+    Signaturvergabe (Prozessbeschreibung)(Illigens)
+        -PixyMon
+        -Per Hardware
     
 Fazit
     Soll-/Ist-Vergleich
