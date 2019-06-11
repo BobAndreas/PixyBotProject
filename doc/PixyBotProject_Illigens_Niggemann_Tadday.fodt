@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<office:document xmlns:office="urn:oasis:names:tc:opendocument:xmlns:office:1.0" xmlns:style="urn:oasis:names:tc:opendocument:xmlns:style:1.0" xmlns:text="urn:oasis:names:tc:opendocument:xmlns:text:1.0" xmlns:table="urn:oasis:names:tc:opendocument:xmlns:table:1.0" xmlns:draw="urn:oasis:names:tc:opendocument:xmlns:drawing:1.0" xmlns:fo="urn:oasis:names:tc:opendocument:xmlns:xsl-fo-compatible:1.0" xmlns:xlink="http://www.w3.org/1999/xlink" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:meta="urn:oasis:names:tc:opendocument:xmlns:meta:1.0" xmlns:number="urn:oasis:names:tc:opendocument:xmlns:datastyle:1.0" xmlns:svg="urn:oasis:names:tc:opendocument:xmlns:svg-compatible:1.0" xmlns:chart="urn:oasis:names:tc:opendocument:xmlns:chart:1.0" xmlns:dr3d="urn:oasis:names:tc:opendocument:xmlns:dr3d:1.0" xmlns:math="http://www.w3.org/1998/Math/MathML" xmlns:form="urn:oasis:names:tc:opendocument:xmlns:form:1.0" xmlns:script="urn:oasis:names:tc:opendocument:xmlns:script:1.0" xmlns:config="urn:oasis:names:tc:opendocument:xmlns:config:1.0" xmlns:ooo="http://openoffice.org/2004/office" xmlns:ooow="http://openoffice.org/2004/writer" xmlns:oooc="http://openoffice.org/2004/calc" xmlns:dom="http://www.w3.org/2001/xml-events" xmlns:xforms="http://www.w3.org/2002/xforms" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:rpt="http://openoffice.org/2005/report" xmlns:of="urn:oasis:names:tc:opendocument:xmlns:of:1.2" xmlns:xhtml="http://www.w3.org/1999/xhtml" xmlns:grddl="http://www.w3.org/2003/g/data-view#" xmlns:officeooo="http://openoffice.org/2009/office" xmlns:tableooo="http://openoffice.org/2009/table" xmlns:drawooo="http://openoffice.org/2010/draw" xmlns:calcext="urn:org:documentfoundation:names:experimental:calc:xmlns:calcext:1.0" xmlns:loext="urn:org:documentfoundation:names:experimental:office:xmlns:loext:1.0" xmlns:field="urn:openoffice:names:experimental:ooo-ms-interop:xmlns:field:1.0" xmlns:formx="urn:openoffice:names:experimental:ooxml-odf-interop:xmlns:form:1.0" xmlns:css3t="http://www.w3.org/TR/css3-text/" office:version="1.2" office:mimetype="application/vnd.oasis.opendocument.text">
+ <office:meta><meta:generator>LibreOffice/6.2.3.2$Linux_X86_64 LibreOffice_project/20$Build-2</meta:generator><meta:initial-creator>Tadday, Paul-Simon (IMV5CV)</meta:initial-creator><dc:creator>Tadday, Paul-Simon (IMV5CV)</dc:creator><meta:creation-date>2019-06-11T13:34:00Z</meta:creation-date><dc:date>2019-06-11T14:04:00Z</dc:date><meta:editing-cycles>4</meta:editing-cycles><meta:editing-duration>PT0S</meta:editing-duration><meta:document-statistic meta:page-count="5" meta:paragraph-count="7" meta:word-count="540" meta:character-count="3936"/><meta:template xlink:type="simple" xlink:actuate="onRequest" xlink:title="" xlink:href="../../../../tmp/mozilla_andre0/PixyBotProject_Illigens_Niggemann_Tadday.odt/Normal.dotm"/></office:meta>
+ <office:settings>
+  <config:config-item-set config:name="ooo:view-settings">
+   <config:config-item config:name="ViewAreaTop" config:type="long">0</config:config-item>
+   <config:config-item config:name="ViewAreaLeft" config:type="long">0</config:config-item>
+   <config:config-item config:name="ViewAreaWidth" config:type="long">47362</config:config-item>
+   <config:config-item config:name="ViewAreaHeight" config:type="long">22941</config:config-item>
+   <config:config-item config:name="ShowRedlineChanges" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="InBrowseMode" config:type="boolean">false</config:config-item>
+   <config:config-item-map-indexed config:name="Views">
+    <config:config-item-map-entry>
+     <config:config-item config:name="ViewId" config:type="string">view2</config:config-item>
+     <config:config-item config:name="ViewLeft" config:type="long">23680</config:config-item>
+     <config:config-item config:name="ViewTop" config:type="long">3000</config:config-item>
+     <config:config-item config:name="VisibleLeft" config:type="long">0</config:config-item>
+     <config:config-item config:name="VisibleTop" config:type="long">0</config:config-item>
+     <config:config-item config:name="VisibleRight" config:type="long">47360</config:config-item>
+     <config:config-item config:name="VisibleBottom" config:type="long">22939</config:config-item>
+     <config:config-item config:name="ZoomType" config:type="short">0</config:config-item>
+     <config:config-item config:name="ViewLayoutColumns" config:type="short">1</config:config-item>
+     <config:config-item config:name="ViewLayoutBookMode" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="ZoomFactor" config:type="short">100</config:config-item>
+     <config:config-item config:name="IsSelectedFrame" config:type="boolean">false</config:config-item>
+     <config:config-item config:name="AnchoredTextOverflowLegacy" config:type="boolean">true</config:config-item>
+    </config:config-item-map-entry>
+   </config:config-item-map-indexed>
+  </config:config-item-set>
+  <config:config-item-set config:name="ooo:configuration-settings">
+   <config:config-item config:name="PrintProspect" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintLeftPages" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintPageBackground" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintControls" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintAnnotationMode" config:type="short">0</config:config-item>
+   <config:config-item config:name="PrintGraphics" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintRightPages" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintFaxName" config:type="string"/>
+   <config:config-item config:name="PrintPaperFromSetup" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintTextPlaceholder" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmptyDbFieldHidesPara" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ApplyParagraphMarkFormatToNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintReversed" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabOverMargin" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedAsianScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="EmbedLatinScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="DisableOffPagePositioning" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedOnlyUsedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SurroundTextWrapSmall" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="BackgroundParaOverDrawings" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ClippedPictures" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="FloattableNomargins" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UnbreakableNumberings" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedSystemFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabOverflow" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintTables" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintSingleJobs" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SmallCapsPercentage66" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CollapseEmptyCellPara" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="RsidRoot" config:type="int">1128369</config:config-item>
+   <config:config-item config:name="IsLabelDocument" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrinterName" config:type="string"/>
+   <config:config-item config:name="OutlineLevelYieldsNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UpdateFromTemplate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintBlackFonts" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TableRowKeep" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IgnoreTabsAndBlanksForLineCalculation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="EmbedComplexScriptFonts" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseOldPrinterMetrics" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="InvertBorderSpacing" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SaveGlobalDocumentLinks" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabsRelativeToIndent" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="Rsid" config:type="int">1128369</config:config-item>
+   <config:config-item config:name="EmbeddedDatabaseName" config:type="string"/>
+   <config:config-item config:name="SaveThumbnail" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintProspectRTL" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintEmptyPages" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ApplyUserData" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrintHiddenText" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddParaTableSpacingAtStart" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="FieldAutoUpdate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseOldNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddParaTableSpacing" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="MsWordCompTrailingBlanks" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="IgnoreFirstLineIndentInNumbering" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrinterPaperFromSetup" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CharacterCompressionType" config:type="short">0</config:config-item>
+   <config:config-item config:name="SaveVersionOnClose" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="ChartAutoUpdate" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="PrinterIndependentLayout" config:type="string">high-resolution</config:config-item>
+   <config:config-item config:name="IsKernAsianPunctuation" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UseFormerObjectPositioning" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TreatSingleColumnBreakAsPageBreak" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="MathBaselineAlignment" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddFrameOffsets" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddVerticalFrameOffsets" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="SubtractFlysAnchoredAtFlys" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="AddParaSpacingToTableCells" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="AddExternalLeading" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="CurrentDatabaseDataSource" config:type="string"/>
+   <config:config-item config:name="AllowPrintJobCancel" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ProtectForm" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UseFormerLineSpacing" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="PrintDrawings" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="UseFormerTextWrapping" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="UnxForceZeroExtLeading" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="TabAtLeftIndentForParagraphsInList" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="RedlineProtectionKey" config:type="base64Binary"/>
+   <config:config-item config:name="PropLineSpacingShrinksFirstLine" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="ConsiderTextWrapOnObjPos" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="StylesNoDefault" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="LinkUpdateMode" config:type="short">1</config:config-item>
+   <config:config-item config:name="AlignTabStopPosition" config:type="boolean">true</config:config-item>
+   <config:config-item config:name="DoNotJustifyLinesWithManualBreak" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="DoNotResetParaAttrsForNumFont" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CurrentDatabaseCommandType" config:type="int">0</config:config-item>
+   <config:config-item config:name="LoadReadonly" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="DoNotCaptureDrawObjsOnPage" config:type="boolean">false</config:config-item>
+   <config:config-item config:name="CurrentDatabaseCommand" config:type="string"/>
+   <config:config-item config:name="PrinterSetup" config:type="base64Binary"/>
+   <config:config-item config:name="ClipAsCharacterAnchoredWriterFlyFrames" config:type="boolean">false</config:config-item>
+  </config:config-item-set>
+ </office:settings>
+ <office:scripts>
+  <office:script script:language="ooo:Basic">
+   <ooo:libraries xmlns:ooo="http://openoffice.org/2004/office" xmlns:xlink="http://www.w3.org/1999/xlink"/>
+  </office:script>
+ </office:scripts>
+ <office:font-face-decls>
+  <style:font-face style:name="Cambria" svg:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable"/>
+  <style:font-face style:name="Times New Roman" svg:font-family="&apos;Times New Roman&apos;" style:font-family-generic="roman" style:font-pitch="variable"/>
+  <style:font-face style:name="Calibri" svg:font-family="Calibri" style:font-family-generic="swiss" style:font-pitch="variable"/>
+ </office:font-face-decls>
+ <office:styles>
+  <style:default-style style:family="graphic">
+   <style:graphic-properties draw:stroke="solid" svg:stroke-width="0.028in" svg:stroke-color="#385d8a" draw:fill-color="#4f81bd" fo:wrap-option="wrap" draw:shadow-offset-x="0.1181in" draw:shadow-offset-y="0.1181in" draw:start-line-spacing-horizontal="0.1114in" draw:start-line-spacing-vertical="0.1114in" draw:end-line-spacing-horizontal="0.1114in" draw:end-line-spacing-vertical="0.1114in" style:flow-with-text="false"/>
+   <style:paragraph-properties fo:line-height="115%" fo:text-align="start" style:text-autospace="ideograph-alpha" style:line-break="strict" style:font-independent-line-spacing="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:text-position="0% 100%" style:font-name="Calibri" fo:font-size="11pt" fo:letter-spacing="normal" fo:language="de" fo:country="DE" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="false" style:font-name-asian="Calibri" style:font-size-asian="11pt" style:language-asian="en" style:country-asian="US" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Times New Roman" style:font-size-complex="11pt" style:language-complex="ar" style:country-complex="SA" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:text-scale="100%" style:font-relief="none"/>
+  </style:default-style>
+  <style:default-style style:family="paragraph">
+   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0.139in" loext:contextual-spacing="false" fo:line-height="115%" fo:text-align="start" style:justify-single-word="false" fo:keep-together="auto" fo:orphans="2" fo:widows="2" fo:hyphenation-ladder-count="no-limit" fo:break-before="auto" fo:break-after="auto" fo:background-color="transparent" fo:padding="0in" fo:border="none" style:shadow="none" fo:keep-with-next="auto" text:number-lines="true" text:line-number="0" style:text-autospace="ideograph-alpha" style:punctuation-wrap="hanging" style:line-break="strict" style:tab-stop-distance="0.4917in" style:snap-to-layout-grid="true" style:writing-mode="lr-tb">
+    <style:background-image/>
+   </style:paragraph-properties>
+   <style:text-properties fo:font-variant="normal" fo:text-transform="none" style:use-window-font-color="true" style:text-outline="false" style:text-line-through-style="none" style:text-line-through-type="none" style:text-position="0% 100%" style:font-name="Calibri" fo:font-size="11pt" fo:letter-spacing="normal" fo:language="de" fo:country="DE" fo:font-style="normal" style:text-underline-style="none" fo:font-weight="normal" style:letter-kerning="false" fo:background-color="transparent" style:font-name-asian="Calibri" style:font-size-asian="11pt" style:language-asian="en" style:country-asian="US" style:font-style-asian="normal" style:font-weight-asian="normal" style:font-name-complex="Times New Roman" style:font-size-complex="11pt" style:language-complex="ar" style:country-complex="SA" style:font-style-complex="normal" style:font-weight-complex="normal" style:text-emphasize="none" style:text-combine="none" style:text-scale="100%" style:font-relief="none" fo:hyphenate="true"/>
+  </style:default-style>
+  <style:default-style style:family="table">
+   <style:table-properties table:border-model="collapsing"/>
+  </style:default-style>
+  <style:default-style style:family="table-row">
+   <style:table-row-properties fo:keep-together="auto"/>
+  </style:default-style>
+  <style:style style:name="Standard" style:family="paragraph" style:class="text">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit"/>
+   <style:text-properties fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Überschrift_20_1" style:display-name="Überschrift 1" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard" style:default-outline-level="1">
+   <style:paragraph-properties fo:margin-top="0.3335in" fo:margin-bottom="0in" loext:contextual-spacing="false" fo:keep-together="always" fo:hyphenation-ladder-count="no-limit" fo:keep-with-next="always"/>
+   <style:text-properties fo:color="#365f91" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-size-complex="14pt" style:font-weight-complex="bold" fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Überschrift_20_2" style:display-name="Überschrift 2" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard" style:default-outline-level="2">
+   <style:paragraph-properties fo:margin-top="0.139in" fo:margin-bottom="0in" loext:contextual-spacing="false" fo:keep-together="always" fo:hyphenation-ladder-count="no-limit" fo:keep-with-next="always"/>
+   <style:text-properties fo:color="#4f81bd" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="13pt" fo:font-weight="bold" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-size-asian="13pt" style:font-weight-asian="bold" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-size-complex="13pt" style:font-weight-complex="bold" fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Überschrift_20_3" style:display-name="Überschrift 3" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard" style:default-outline-level="3">
+   <style:paragraph-properties fo:margin-top="0.139in" fo:margin-bottom="0in" loext:contextual-spacing="false" fo:keep-together="always" fo:hyphenation-ladder-count="no-limit" fo:keep-with-next="always"/>
+   <style:text-properties fo:color="#4f81bd" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-weight="bold" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-weight-asian="bold" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-weight-complex="bold" fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Überschrift_20_4" style:display-name="Überschrift 4" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard" style:default-outline-level="4">
+   <style:paragraph-properties fo:margin-top="0.139in" fo:margin-bottom="0in" loext:contextual-spacing="false" fo:keep-together="always" fo:hyphenation-ladder-count="no-limit" fo:keep-with-next="always"/>
+   <style:text-properties fo:color="#4f81bd" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-style="italic" fo:font-weight="bold" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-style-asian="italic" style:font-weight-asian="bold" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-style-complex="italic" style:font-weight-complex="bold" fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Verzeichnis_20_1" style:display-name="Verzeichnis 1" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard" style:auto-update="true">
+   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0.0693in" loext:contextual-spacing="false" fo:hyphenation-ladder-count="no-limit"/>
+   <style:text-properties fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Verzeichnis_20_2" style:display-name="Verzeichnis 2" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard" style:auto-update="true">
+   <style:paragraph-properties fo:margin-left="0.1528in" fo:margin-right="0in" fo:margin-top="0in" fo:margin-bottom="0.0693in" loext:contextual-spacing="false" fo:hyphenation-ladder-count="no-limit" fo:text-indent="0in" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Verzeichnis_20_3" style:display-name="Verzeichnis 3" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard" style:auto-update="true">
+   <style:paragraph-properties fo:margin-left="0.3055in" fo:margin-right="0in" fo:margin-top="0in" fo:margin-bottom="0.0693in" loext:contextual-spacing="false" fo:hyphenation-ladder-count="no-limit" fo:text-indent="0in" style:auto-text-indent="false">
+    <style:tab-stops/>
+   </style:paragraph-properties>
+   <style:text-properties fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Titel" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard">
+   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0.2083in" loext:contextual-spacing="false" fo:line-height="100%" fo:hyphenation-ladder-count="no-limit" fo:padding-left="0in" fo:padding-right="0in" fo:padding-top="0in" fo:padding-bottom="0.0555in" fo:border-left="none" fo:border-right="none" fo:border-top="none" fo:border-bottom="0.99pt solid #4f81bd" style:shadow="none"/>
+   <style:text-properties fo:color="#17365d" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="26pt" fo:letter-spacing="0.0035in" style:letter-kerning="true" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-size-asian="26pt" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-size-complex="26pt" fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Untertitel" style:family="paragraph" style:parent-style-name="Standard" style:next-style-name="Standard">
+   <style:paragraph-properties fo:hyphenation-ladder-count="no-limit"/>
+   <style:text-properties fo:color="#4f81bd" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="12pt" fo:letter-spacing="0.0102in" fo:font-style="italic" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-size-complex="12pt" style:font-style-complex="italic" fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Kopfzeile" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" loext:contextual-spacing="false" fo:line-height="100%" fo:hyphenation-ladder-count="no-limit">
+    <style:tab-stops>
+     <style:tab-stop style:position="3.15in" style:type="center"/>
+     <style:tab-stop style:position="6.3in" style:type="right"/>
+    </style:tab-stops>
+   </style:paragraph-properties>
+   <style:text-properties fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Fußzeile" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:margin-top="0in" fo:margin-bottom="0in" loext:contextual-spacing="false" fo:line-height="100%" fo:hyphenation-ladder-count="no-limit">
+    <style:tab-stops>
+     <style:tab-stop style:position="3.15in" style:type="center"/>
+     <style:tab-stop style:position="6.3in" style:type="right"/>
+    </style:tab-stops>
+   </style:paragraph-properties>
+   <style:text-properties fo:hyphenate="false"/>
+  </style:style>
+  <style:style style:name="Absatz-Standardschriftart" style:family="text"/>
+  <style:style style:name="Überschrift_20_1_20_Zchn" style:display-name="Überschrift 1 Zchn" style:family="text" style:parent-style-name="Absatz-Standardschriftart">
+   <style:text-properties fo:color="#365f91" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="14pt" fo:font-weight="bold" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-size-asian="14pt" style:font-weight-asian="bold" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-size-complex="14pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="Hyperlink" style:family="text" style:parent-style-name="Absatz-Standardschriftart">
+   <style:text-properties fo:color="#0000ff" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" style:text-underline-mode="continuous" style:text-overline-mode="continuous" style:text-line-through-mode="continuous"/>
+  </style:style>
+  <style:style style:name="Überschrift_20_2_20_Zchn" style:display-name="Überschrift 2 Zchn" style:family="text" style:parent-style-name="Absatz-Standardschriftart">
+   <style:text-properties fo:color="#4f81bd" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="13pt" fo:font-weight="bold" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-size-asian="13pt" style:font-weight-asian="bold" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-size-complex="13pt" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="Überschrift_20_3_20_Zchn" style:display-name="Überschrift 3 Zchn" style:family="text" style:parent-style-name="Absatz-Standardschriftart">
+   <style:text-properties fo:color="#4f81bd" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-weight="bold" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-weight-asian="bold" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="Überschrift_20_4_20_Zchn" style:display-name="Überschrift 4 Zchn" style:family="text" style:parent-style-name="Absatz-Standardschriftart">
+   <style:text-properties fo:color="#4f81bd" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-style="italic" fo:font-weight="bold" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-style-asian="italic" style:font-weight-asian="bold" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-style-complex="italic" style:font-weight-complex="bold"/>
+  </style:style>
+  <style:style style:name="Titel_20_Zchn" style:display-name="Titel Zchn" style:family="text" style:parent-style-name="Absatz-Standardschriftart">
+   <style:text-properties fo:color="#17365d" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="26pt" fo:letter-spacing="0.0035in" style:letter-kerning="true" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-size-asian="26pt" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-size-complex="26pt"/>
+  </style:style>
+  <style:style style:name="Untertitel_20_Zchn" style:display-name="Untertitel Zchn" style:family="text" style:parent-style-name="Absatz-Standardschriftart">
+   <style:text-properties fo:color="#4f81bd" style:font-name="Cambria" fo:font-family="Cambria" style:font-family-generic="roman" style:font-pitch="variable" fo:font-size="12pt" fo:letter-spacing="0.0102in" fo:font-style="italic" style:font-name-asian="Times New Roman" style:font-family-asian="&apos;Times New Roman&apos;" style:font-family-generic-asian="roman" style:font-pitch-asian="variable" style:font-size-asian="12pt" style:font-style-asian="italic" style:font-name-complex="Times New Roman" style:font-family-complex="&apos;Times New Roman&apos;" style:font-family-generic-complex="roman" style:font-pitch-complex="variable" style:font-size-complex="12pt" style:font-style-complex="italic"/>
+  </style:style>
+  <style:style style:name="Kopfzeile_20_Zchn" style:display-name="Kopfzeile Zchn" style:family="text" style:parent-style-name="Absatz-Standardschriftart"/>
+  <style:style style:name="Fußzeile_20_Zchn" style:display-name="Fußzeile Zchn" style:family="text" style:parent-style-name="Absatz-Standardschriftart"/>
+  <style:style style:name="Internet_20_link" style:display-name="Internet link" style:family="text">
+   <style:text-properties fo:color="#000080" fo:language="zxx" fo:country="none" style:text-underline-style="solid" style:text-underline-width="auto" style:text-underline-color="font-color" style:language-asian="zxx" style:country-asian="none" style:language-complex="zxx" style:country-complex="none"/>
+  </style:style>
+  <text:outline-style style:name="Outline">
+   <text:outline-level-style text:level="1" style:num-format="">
+    <style:list-level-properties/>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="2" style:num-format="">
+    <style:list-level-properties/>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="3" style:num-format="">
+    <style:list-level-properties/>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="4" style:num-format="">
+    <style:list-level-properties/>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="5" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="6" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="7" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="8" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="9" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+   <text:outline-level-style text:level="10" style:num-format="">
+    <style:list-level-properties text:list-level-position-and-space-mode="label-alignment">
+     <style:list-level-label-alignment text:label-followed-by="listtab"/>
+    </style:list-level-properties>
+   </text:outline-level-style>
+  </text:outline-style>
+  <text:notes-configuration text:note-class="footnote" style:num-format="1" text:start-value="0" text:footnotes-position="page" text:start-numbering-at="document"/>
+  <text:notes-configuration text:note-class="endnote" style:num-format="i" text:start-value="0"/>
+  <text:linenumbering-configuration text:number-lines="false" text:offset="0.1965in" style:num-format="1" text:number-position="left" text:increment="5"/>
+ </office:styles>
+ <office:automatic-styles>
+  <style:style style:name="P1" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:break-before="page"/>
+  </style:style>
+  <style:style style:name="P2" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+  </style:style>
+  <style:style style:name="P3" style:family="paragraph" style:parent-style-name="Standard">
+   <style:paragraph-properties fo:text-align="end" style:justify-single-word="false"/>
+  </style:style>
+  <style:style style:name="P4" style:family="paragraph" style:parent-style-name="Titel">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+  </style:style>
+  <style:style style:name="P5" style:family="paragraph" style:parent-style-name="Untertitel">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false"/>
+  </style:style>
+  <style:style style:name="P6" style:family="paragraph" style:parent-style-name="Verzeichnis_20_1">
+   <style:paragraph-properties>
+    <style:tab-stops>
+     <style:tab-stop style:position="6.2929in" style:type="right" style:leader-style="dotted" style:leader-text="."/>
+    </style:tab-stops>
+   </style:paragraph-properties>
+  </style:style>
+  <style:style style:name="P7" style:family="paragraph" style:parent-style-name="Verzeichnis_20_2">
+   <style:paragraph-properties>
+    <style:tab-stops>
+     <style:tab-stop style:position="6.1402in" style:type="right" style:leader-style="dotted" style:leader-text="."/>
+    </style:tab-stops>
+   </style:paragraph-properties>
+  </style:style>
+  <style:style style:name="P8" style:family="paragraph" style:parent-style-name="Verzeichnis_20_3">
+   <style:paragraph-properties>
+    <style:tab-stops>
+     <style:tab-stop style:position="5.9874in" style:type="right" style:leader-style="dotted" style:leader-text="."/>
+    </style:tab-stops>
+   </style:paragraph-properties>
+  </style:style>
+  <style:style style:name="P9" style:family="paragraph" style:parent-style-name="Standard" style:master-page-name="MP0">
+   <style:paragraph-properties fo:text-align="center" style:justify-single-word="false" style:page-number="auto" fo:break-before="page"/>
+  </style:style>
+  <style:style style:name="P10" style:family="paragraph" style:parent-style-name="Überschrift_20_1">
+   <style:paragraph-properties fo:break-before="page"/>
+  </style:style>
+  <style:style style:name="Sect1" style:family="section">
+   <style:section-properties style:editable="false">
+    <style:columns fo:column-count="1" fo:column-gap="0in"/>
+   </style:section-properties>
+  </style:style>
+  <style:page-layout style:name="pm1">
+   <style:page-layout-properties fo:page-width="8.5in" fo:page-height="11in" style:num-format="1" style:print-orientation="portrait" fo:margin-top="0.7874in" fo:margin-bottom="0.7874in" fo:margin-left="0.7874in" fo:margin-right="0.7874in" style:writing-mode="lr-tb" style:footnote-max-height="0in">
+    <style:footnote-sep style:width="0.0071in" style:distance-before-sep="0.0398in" style:distance-after-sep="0.0398in" style:line-style="solid" style:adjustment="left" style:rel-width="25%" style:color="#000000"/>
+   </style:page-layout-properties>
+   <style:header-style/>
+   <style:footer-style/>
+  </style:page-layout>
+  <style:page-layout style:name="pm2">
+   <style:page-layout-properties fo:page-width="8.2681in" fo:page-height="11.6929in" style:num-format="1" style:print-orientation="portrait" fo:margin-top="0.9839in" fo:margin-bottom="0.7874in" fo:margin-left="0.9839in" fo:margin-right="0.9839in" style:writing-mode="lr-tb" style:layout-grid-color="#c0c0c0" style:layout-grid-lines="20" style:layout-grid-base-height="0.278in" style:layout-grid-ruby-height="0.139in" style:layout-grid-mode="none" style:layout-grid-ruby-below="false" style:layout-grid-print="false" style:layout-grid-display="false" style:footnote-max-height="0in">
+    <style:footnote-sep style:width="0.0071in" style:line-style="solid" style:adjustment="left" style:rel-width="33%" style:color="#000000"/>
+   </style:page-layout-properties>
+   <style:header-style/>
+   <style:footer-style/>
+  </style:page-layout>
+ </office:automatic-styles>
+ <office:master-styles>
+  <style:master-page style:name="Standard" style:page-layout-name="pm1"/>
+  <style:master-page style:name="MP0" style:page-layout-name="pm2"/>
+ </office:master-styles>
+ <office:body>
+  <office:text text:use-soft-page-breaks="true">
+   <text:sequence-decls>
+    <text:sequence-decl text:display-outline-level="0" text:name="Illustration"/>
+    <text:sequence-decl text:display-outline-level="0" text:name="Table"/>
+    <text:sequence-decl text:display-outline-level="0" text:name="Text"/>
+    <text:sequence-decl text:display-outline-level="0" text:name="Drawing"/>
+    <text:sequence-decl text:display-outline-level="0" text:name="Figure"/>
+   </text:sequence-decls>
+   <text:p text:style-name="P9"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P4">Roboterwagen mit<text:line-break/>Pixy2-Kamerasensor-Steuerung<text:line-break/><text:line-break/></text:p>
+   <text:p text:style-name="P5"><text:line-break/></text:p>
+   <text:p text:style-name="P5">Projektarbeit Bachelor Technische Informatik 4. Sem. Prof. Korte<text:line-break/>Julian Illigens – André Niggemann – Paul-Simon Tadday</text:p>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P2"/>
+   <text:p text:style-name="P3">Lemgo, den 20.06.2019</text:p>
+   <text:h text:style-name="P10" text:outline-level="1">Inhaltsverzeichnis</text:h>
+   <text:table-of-content text:style-name="Sect1" text:name="_TOC0">
+    <text:table-of-content-source text:outline-level="3" text:use-index-marks="false">
+     <text:index-title-template text:style-name="Contents_20_Heading">Table of Contents</text:index-title-template>
+     <text:table-of-content-entry-template text:outline-level="1" text:style-name="Verzeichnis_20_1">
+      <text:index-entry-link-start/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="2" text:style-name="Verzeichnis_20_2">
+      <text:index-entry-link-start/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="3" text:style-name="Verzeichnis_20_3">
+      <text:index-entry-link-start/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="4" text:style-name="Contents_20_4">
+      <text:index-entry-link-start text:style-name="Index_20_Link"/>
+      <text:index-entry-chapter/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="5" text:style-name="Contents_20_5">
+      <text:index-entry-link-start text:style-name="Index_20_Link"/>
+      <text:index-entry-chapter/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="6" text:style-name="Contents_20_6">
+      <text:index-entry-link-start text:style-name="Index_20_Link"/>
+      <text:index-entry-chapter/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="7" text:style-name="Contents_20_7">
+      <text:index-entry-link-start text:style-name="Index_20_Link"/>
+      <text:index-entry-chapter/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="8" text:style-name="Contents_20_8">
+      <text:index-entry-link-start text:style-name="Index_20_Link"/>
+      <text:index-entry-chapter/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="9" text:style-name="Contents_20_9">
+      <text:index-entry-link-start text:style-name="Index_20_Link"/>
+      <text:index-entry-chapter/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+     <text:table-of-content-entry-template text:outline-level="10" text:style-name="Contents_20_10">
+      <text:index-entry-link-start text:style-name="Index_20_Link"/>
+      <text:index-entry-chapter/>
+      <text:index-entry-text/>
+      <text:index-entry-tab-stop style:type="right" style:leader-char="."/>
+      <text:index-entry-page-number/>
+      <text:index-entry-link-end/>
+     </text:table-of-content-entry-template>
+    </text:table-of-content-source>
+    <text:index-body>
+     <text:p text:style-name="P6"><text:a xlink:type="simple" xlink:href="#_Toc11160030" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Einleitung (Tadday)</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160030" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160031" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Aufgabenstellung</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160031" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160032" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Projektbeschreibung</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160032" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160033" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Projektumfeld</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160033" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P6"><text:a xlink:type="simple" xlink:href="#_Toc11160034" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Projektplanung</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160034" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160035" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Projektphasen (Illigens)</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160035" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160036" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Projektressourcen (Illigens)</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160036" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160037" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">ArduinoMega</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160037" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160038" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Shield</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160038" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160039" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Motoren</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160039" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160040" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Pixy</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160040" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160041" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Team-Arbeit (Niggemann)</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160041" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160042" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Versionsverwaltung</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160042" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160043" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Pair Programming(Vieraugenprinzip, Extreme Programming)</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160043" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P6"><text:a xlink:type="simple" xlink:href="#_Toc11160044" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Analysephase</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160044" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160045" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Inspiration von bereits existierender Motrotreiberbibliothek des Herstellers</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160045" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160046" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Pixy Library Funktionsumfang und Aufbau</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160046" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160047" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">PixyMon Funktionsumfang</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160047" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160048" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Anforderungsanalyse</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160048" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P6"><text:a xlink:type="simple" xlink:href="#_Toc11160049" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Entwurfsphase</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160049" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160050" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Regelungstechnik</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160050" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160051" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">PID</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160051" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160052" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Ansteuerung der Motoren über extra Controller</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160052" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160053" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">StateMachine // kann man gut mit einem Diagramm darstellen</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160053" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>3</text:a></text:p>
+     <text:p text:style-name="P6"><text:a xlink:type="simple" xlink:href="#_Toc11160054" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Implementierungsphase</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160054" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160055" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">C++</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160055" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160056" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Signaturvergabe (Prozessbeschreibung)</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160056" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160057" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">PixyMon</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160057" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+     <text:p text:style-name="P8"><text:a xlink:type="simple" xlink:href="#_Toc11160058" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Per Hardware</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160058" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+     <text:p text:style-name="P6"><text:a xlink:type="simple" xlink:href="#_Toc11160059" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Fazit</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160059" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160060" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Soll-/Ist-Vergleich</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160060" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+     <text:p text:style-name="P7"><text:a xlink:type="simple" xlink:href="#_Toc11160061" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Ausblick</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160061" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+     <text:p text:style-name="P6"><text:a xlink:type="simple" xlink:href="#_Toc11160062" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:span text:style-name="Hyperlink">Quellen</text:span></text:a><text:a xlink:type="simple" xlink:href="#_Toc11160062" office:target-frame-name="_top" xlink:show="replace" text:style-name="Internet_20_link" text:visited-style-name="Visited_20_Internet_20_Link"><text:tab/>4</text:a></text:p>
+    </text:index-body>
+   </text:table-of-content>
+   <text:p text:style-name="P1"/>
+   <text:p text:style-name="Standard"/>
+   <text:h text:style-name="Überschrift_20_1" text:outline-level="1"><text:bookmark-start text:name="_Toc11160030"/><text:soft-page-break/>Einleitung (Tadday)<text:bookmark-end text:name="_Toc11160030"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160031"/>Aufgabenstellung<text:bookmark-end text:name="_Toc11160031"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160032"/>Projektbeschreibung<text:bookmark-end text:name="_Toc11160032"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160033"/>Projektumfeld<text:bookmark-end text:name="_Toc11160033"/></text:h>
+   <text:h text:style-name="Überschrift_20_1" text:outline-level="1"><text:bookmark-start text:name="_Toc11160034"/>Projektplanung<text:bookmark-end text:name="_Toc11160034"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160035"/>Projektphasen (Illigens)<text:bookmark-end text:name="_Toc11160035"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160036"/>Projektressourcen (Illigens)<text:bookmark-end text:name="_Toc11160036"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160037"/>ArduinoMega<text:bookmark-end text:name="_Toc11160037"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160038"/>Shield<text:bookmark-end text:name="_Toc11160038"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160039"/>Motoren<text:bookmark-end text:name="_Toc11160039"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160040"/>Pixy<text:bookmark-end text:name="_Toc11160040"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160041"/>Team-Arbeit (Niggemann)<text:bookmark-end text:name="_Toc11160041"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160042"/>Versionsverwaltung<text:bookmark-end text:name="_Toc11160042"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160043"/>Pair Programming(Vieraugenprinzip, Extreme Programming)<text:bookmark-end text:name="_Toc11160043"/></text:h>
+   <text:h text:style-name="Überschrift_20_1" text:outline-level="1"><text:bookmark-start text:name="_Toc11160044"/>Analysephase<text:bookmark-end text:name="_Toc11160044"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160045"/>Inspiration von bereits existierender Motrotreiberbibliothek des Herstellers<text:bookmark-end text:name="_Toc11160045"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160046"/>Pixy Library Funktionsumfang und Aufbau<text:bookmark-end text:name="_Toc11160046"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160047"/>PixyMon Funktionsumfang<text:bookmark-end text:name="_Toc11160047"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160048"/>Anforderungsanalyse<text:bookmark-end text:name="_Toc11160048"/></text:h>
+   <text:h text:style-name="Überschrift_20_1" text:outline-level="1"><text:bookmark-start text:name="_Toc11160049"/>Entwurfsphase<text:bookmark-end text:name="_Toc11160049"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160050"/>Regelungstechnik<text:bookmark-end text:name="_Toc11160050"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160051"/>PID<text:bookmark-end text:name="_Toc11160051"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160052"/>Ansteuerung der Motoren über extra Controller<text:bookmark-end text:name="_Toc11160052"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160053"/>StateMachine // kann man gut mit einem Diagramm darstellen<text:bookmark-end text:name="_Toc11160053"/></text:h>
+   <text:p text:style-name="Standard"><text:soft-page-break/></text:p>
+   <text:p text:style-name="Standard"/>
+   <text:h text:style-name="Überschrift_20_1" text:outline-level="1"><text:bookmark-start text:name="_Toc11160054"/>Implementierungsphase<text:bookmark-end text:name="_Toc11160054"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160055"/>C++<text:bookmark-end text:name="_Toc11160055"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160056"/>Signaturvergabe (Prozessbeschreibung)<text:bookmark-end text:name="_Toc11160056"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160057"/>PixyMon<text:bookmark-end text:name="_Toc11160057"/></text:h>
+   <text:h text:style-name="Überschrift_20_3" text:outline-level="3"><text:s text:c="8"/><text:bookmark-start text:name="_Toc11160058"/>Per Hardware<text:bookmark-end text:name="_Toc11160058"/></text:h>
+   <text:p text:style-name="Standard"><text:s text:c="4"/></text:p>
+   <text:h text:style-name="Überschrift_20_1" text:outline-level="1"><text:bookmark-start text:name="_Toc11160059"/>Fazit<text:bookmark-end text:name="_Toc11160059"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160060"/>Soll-/Ist-Vergleich<text:bookmark-end text:name="_Toc11160060"/></text:h>
+   <text:h text:style-name="Überschrift_20_2" text:outline-level="2"><text:s text:c="4"/><text:bookmark-start text:name="_Toc11160061"/>Ausblick<text:bookmark-end text:name="_Toc11160061"/></text:h>
+   <text:h text:style-name="Überschrift_20_1" text:outline-level="1"><text:bookmark-start text:name="_Toc11160062"/>Quellen<text:bookmark-end text:name="_Toc11160062"/></text:h>
+  </office:text>
+ </office:body>
+</office:document>
