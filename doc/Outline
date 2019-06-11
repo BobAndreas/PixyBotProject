@@ -6,9 +6,11 @@ Projektplanung
     Projektphasen (Illigens)
     Projektressourcen (Illigens)
         ArduinoMega
+        ArduinoIDE
         Shield
         Motoren
         Pixy
+        PixyMon
     Team-Arbeit (Niggemann)
         Versionsverwaltung
         Cross-Platform-Development
@@ -17,7 +19,6 @@ Projektplanung
 Analysephase
     Inspiration von bereits existierender Motrotreiberbibliothek des Herstellers
     Pixy Library Funktionsumfang und Aufbau
-    PixyMon Funktionsumfang
     Anforderungsanalyse
 Entwurfsphase
     Regelungstechnik (Tadday)
