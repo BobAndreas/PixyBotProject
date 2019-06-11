@@ -131,6 +131,7 @@ void loop()
       break;
     case Searching:
       if (blocks > 0) {
+        //update the current value in the controllers because they have been moved in the searching phase
         PanController->setCurrent(following_x);
         TiltController->setCurrent(following_y);
         state = Following;

@@ -24,9 +24,8 @@ int PID::next(int measured){
   currentValue = (config.p * difference + config.i * sum / historyScale + config.d * (difference - valueBuf[index])) / config.divider;
 
   if (currentValue < config.lowerBound) currentValue = config.lowerBound;
-  if (currentValue > config.upperBound) currentValue = config.upperBound;
+  else if (currentValue > config.upperBound) currentValue = config.upperBound;
  
-  
   index = (index + 1) % BUFFER_SIZE;
   
   valueBuf[index] = difference;
