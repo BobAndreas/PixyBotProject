@@ -88,9 +88,9 @@ void setup()
     50, 
     9500);
   SpeedController = new PID(PID_Config{
-    p: 20,
-    i: 00,
-    d: 0,
+    p: -20,
+    i: -0,
+    d: -0,
     target: TARGETSIZE,
     divider: 10,
     lowerBound: -127,
@@ -183,7 +183,8 @@ void following(uint16_t blocks) {
   tilt = TiltController->next(y);
   pan = PanController->next(x);
 
-  speedBuff = CalcSpeed(width, height);
+  int perceivedsize = max(height, width);
+  speedBuff = SpeedController->next(perceivedsize);
   rotationBuff = RotationController->next(pan);
 
   speedLeft = speedBuff + rotationBuff;

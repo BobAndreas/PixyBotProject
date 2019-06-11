@@ -33,12 +33,6 @@
 
 
 
-int16_t CalcSpeed(int width, int height) {
-  int perceivedsize = max(height, width);
-  return -(SpeedController->next(perceivedsize));
-
-}
-
 void printBlock(Block* block) {
   
   //Print signature
@@ -61,6 +55,7 @@ void printBlock(Block* block) {
   print("height = ");
   println(block->m_height);
 
+  //print perceived size
   print("perceived size = ");
   println(max(block->m_height, block->m_width));
 
