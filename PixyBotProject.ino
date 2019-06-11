@@ -43,16 +43,13 @@ BoundedPID* PanController;
 PID* SpeedController;
 PID* RotationController;
 
-Block last;
-bool lastValid;
-int tilt = 0;
 int idleCount = 0;
 
 const int TARGETSIZE = 90;
 const int SPEED_FACTOR = 2;
 const int CLEAR_COUNT = 30;
 const int SPEED_LIMIT = 200;
-const int PAN_LIMIT = 1000;
+
 
 int following_x, following_y;
 
@@ -64,7 +61,7 @@ void setup()
   /*Configure the motor A to control the wheel at the right side.*/
   /*Configure the motor B to control the wheel at the left side.*/
 
-  lastValid = false;
+  
   Serial.begin(9600);
   for(int i = 5; i < 11; i++) pinMode(i, OUTPUT);
   ////print("Starting...\n");
@@ -77,8 +74,8 @@ void setup()
     lowerBound: -200,
     upperBound: 200},
     500, 
-    0, 
-    1000);
+    50, 
+    950);
   TiltController = new BoundedPID(PID_Config{
     p: 30,
     i: 10,
@@ -88,15 +85,15 @@ void setup()
     lowerBound: -200,
     upperBound: 200}, 
     500, 
-    0, 
-    1000);
+    50, 
+    9500);
   SpeedController = new PID(PID_Config{
     p: 20,
     i: 00,
     d: 0,
-target: TARGETSIZE,
+    target: TARGETSIZE,
     divider: 10,
-lowerBound: -127,
+    lowerBound: -127,
     upperBound: 127});
   RotationController  = new PID(PID_Config{
     p: 20,
@@ -111,10 +108,7 @@ lowerBound: -127,
 
 void loop()
 {
-  uint16_t blocks;
-
-
-  blocks = pixy.getBlocks();  //receive data from pixy
+  uint16_t blocks = pixy.getBlocks();  //receive data from pixy
 
   switch (state) {
     case Waiting:
@@ -170,14 +164,10 @@ void following(uint16_t blocks) {
 
   int16_t speedBuff, rotationBuff;
   int16_t speedLeft, speedRight;
-  signature = pixy.blocks[0].m_signature;    //get object's signature
   uint16_t maxSize, index;
 
   //Größtes Rechteck finden
-  Block current = findBlockRepresentation(blocks, pixy.blocks);
-
-  if (lastValid)
-    current = fusion(&current, &last);
+  Block current = findSingleBlockRepresentation(blocks, pixy.blocks);
 
   ////println("Combined: ");
   printBlock(&current);
@@ -187,8 +177,8 @@ void following(uint16_t blocks) {
   height = current.m_height;          //get height
 
 
-  last = current;
-  lastValid = true;
+
+  
 
   tilt = TiltController->next(y);
   pan = PanController->next(x);
@@ -213,7 +203,6 @@ void following(uint16_t blocks) {
 
 
 void waiting() {
-  lastValid = false;
   idleCount++;
   motorcontrol.drive(0,0);
   delay(100);

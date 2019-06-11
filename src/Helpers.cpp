@@ -33,19 +33,6 @@
 
 
 
-int16_t combine(int16_t prop1, int16_t prop2) {
-  return (prop1 * 2 + prop2) / 3;
-}
-
-Block fusion(Block* current, Block* last) {
-  Block combined;
-  combined.m_x = combine(current->m_x, last->m_x);
-  combined.m_y = combine(current->m_y, last->m_y);
-  combined.m_width = combine(current->m_width, last->m_width);
-  combined.m_height = combine(current->m_height, last->m_height);
-  return combined;
-}
-
 int16_t CalcSpeed(int width, int height) {
   int perceivedsize = max(height, width);
   return -(SpeedController->next(perceivedsize));
