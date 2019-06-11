@@ -31,7 +31,18 @@
 #define println(a) Serial.println(a)
 #endif
 
-
+Block findSingleBlockRepresentation(int16_t blockcount, Block* blocks) {
+  int16_t maxSize, index;
+  maxSize = -1;
+  for (int i = 0; i < blockcount; i++) {
+    int16_t curMax = max(blocks[i].m_width, blocks[i].m_height);
+    if (curMax > maxSize) {
+      index = i;
+      maxSize = curMax;
+    }
+  }
+  return blocks[index];
+}
 
 void printBlock(Block* block) {
   
