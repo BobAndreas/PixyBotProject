@@ -24,7 +24,8 @@ MotorControl motorcontrol =
         MOTORSHIELD_IN2));
 
 Pixy2 pixyCore;
-Pixy2CCC<Link2SPI> pixy = pixyCore.ccc; 
+Pixy2CCC<Link2SPI> pixy = Pixy2CCC(&pixyCore);
+
 
 State state;
 
@@ -101,7 +102,8 @@ void setup()
   for(int i = 5; i < 11; i++) pinMode(i, OUTPUT);
   ////Serial.print("Starting...\n");
   pixyCore.init();
-
+  pixyCore.changeProg("CCC");
+  
   
 
   initializePIDControllers();
