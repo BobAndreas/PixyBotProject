@@ -34,7 +34,7 @@ const int TARGETSIZE = 90;
 const int SPEED_FACTOR = 2;
 const int CLEAR_COUNT = 30;
 const int SPEED_LIMIT = 200;
-const int PAN_LIMIT
+const int PAN_LIMIT = 1000;
 
 
 int following_x, following_y;
