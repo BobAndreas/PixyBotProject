@@ -1,0 +1,4 @@
+Ansteuerung der Motoren
+Der Entwurf des Motorcontrollers als Eigenständige Einheit war ein wichtiger Teil unseres Entwurfs, weil es es vereinfacht, diesen Teil einzeln zu ändern ohne den restlichen Code zu beeinflussen und außerdem verringert es die Komplexität des verwendenden Codes, da es sich nicht mit den Feinheiten der Motoransteuerung befassen muss.
+
+Die Grundlegende Art der Ansteuerung wurde wie in der Analysephase bereits erwähnt von der Demonstration des Herstellers übernommen. Da die Motoren aber mit sehr kleinen Analogwerten als Signal nicht Anfahren könne, haben wir eine Art hysterese Schaltung vorgesehen, die verhindert, dass diese kleinen Werte überhaupt an die Motoren weitergeleitet werden.
