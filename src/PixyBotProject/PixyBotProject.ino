@@ -4,15 +4,11 @@
 
 
 
-#ifdef unix
-#include "src/BoundedPID.hpp"
-#include "src/MotorControl.hpp"
+#include "BoundedPID.hpp"
+#include "MotorControl.hpp"
+#include <Pixy2>
+#include <Pixy2CCC.h>
 
-#else 
-#include "src\BoundedPID.hpp"
-#include "src\MotorControl.hpp"
-
-#endif
 
 enum State {Waiting, Searching, Following};
 
@@ -94,7 +90,7 @@ void setup()
   
   Serial.begin(9600);
   for(int i = 5; i < 11; i++) pinMode(i, OUTPUT);
-  ////print("Starting...\n");
+  ////Serial.print("Starting...\n");
   pixyCore.init();
 
   motorcontrol = 
@@ -155,15 +151,15 @@ void loop()
   
   switch (state) {
     case Searching:
-      println("Searching");
+      Serial.println("Searching");
       searching();
       break;
     case Following:
-      println("Following");
+      Serial.println("Following");
       following(blocks);
       break;
     case Waiting:
-      println("Waiting");
+      Serial.println("Waiting");
       waiting();
         break;
     }
@@ -183,7 +179,7 @@ void following(uint16_t blocks) {
   //side length.
   int perceivedsize = max(current.m_height, current.m_width);
 
-  ////println("Combined: ");
+  ////Serial.println("Combined: ");
   //printBlock(&current);  
 
   //feed Infos to the relevant controllers
@@ -199,13 +195,13 @@ void following(uint16_t blocks) {
 
   //print resulting commands
   /*
-  print("left: ");
-  println(speedLeft);
-  print("right: ");
-  println(speedRight);
-  print("tilt: ");
-  println(tilt);
-  println();
+  Serial.print("left: ");
+  Serial.println(speedLeft);
+  Serial.print("right: ");
+  Serial.println(speedRight);
+  Serial.print("tilt: ");
+  Serial.println(tilt);
+  Serial.println();
    */
   //give the commands to the motorcontrol and transmit it via SPI to the pixy
   motorcontrol.drive(speedLeft, speedRight);
@@ -244,7 +240,46 @@ void searching() {
 }
 
 
+Block findSingleBlockRepresentation(int16_t blockcount, Block* blocks) {
+  int16_t maxSize, index;
+  maxSize = -1;
+  for (int i = 0; i < blockcount; i++) {
+    int16_t curMax = max(blocks[i].m_width, blocks[i].m_height);
+    if (curMax > maxSize) {
+      index = i;
+      maxSize = curMax;
+    }
+  }
+  return blocks[index];
+}
 
+void printBlock(Block* block) {
+  
+  //Print signature
+  Serial.print("Signature = ");
+  Serial.println(block->m_signature);
+
+  //print x position
+  Serial.print("x = ");
+  Serial.println(block->m_x);
+
+  //print y position
+  Serial.print("y = ");
+  Serial.println(block->m_y);
+
+  //print tha wirdth of the object
+  Serial.print("width = ");
+  Serial.println(block->m_width);
+
+  //print the height of the object
+  Serial.print("height = ");
+  Serial.println(block->m_height);
+
+  //print perceived size
+  Serial.print("perceived size = ");
+  Serial.println(max(block->m_height, block->m_width));
+
+}
 
 
 
