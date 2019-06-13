@@ -4,15 +4,24 @@
 
 
 
+#include <Pixy2.h>
+#include <Pixy2CCC.h>
 #include "BoundedPID.hpp"
 #include "MotorControl.hpp"
-#include <Pixy2>
-#include <Pixy2CCC.h>
 
 
 enum State {Waiting, Searching, Following};
 
-MotorControl motorcontrol;
+MotorControl motorcontrol = 
+    MotorControl(
+      new Motor(
+        SPEEDPIN_B,
+        MOTORSHIELD_IN4,
+        MOTORSHIELD_IN3),
+      new Motor(
+        SPEEDPIN_A,
+        MOTORSHIELD_IN1,
+        MOTORSHIELD_IN2));
 
 Pixy2 pixyCore;
 Pixy2CCC<Link2SPI> pixy = pixyCore.ccc; 
@@ -93,16 +102,7 @@ void setup()
   ////Serial.print("Starting...\n");
   pixyCore.init();
 
-  motorcontrol = 
-    MotorControl(
-      new Motor(
-        SPEEDPIN_B,
-        MOTORSHIELD_IN4,
-        MOTORSHIELD_IN3),
-      new Motor(
-        SPEEDPIN_A,
-        MOTORSHIELD_IN1,
-        MOTORSHIELD_IN2));
+  
 
   initializePIDControllers();
 
