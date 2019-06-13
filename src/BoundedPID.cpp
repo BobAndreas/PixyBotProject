@@ -1,6 +1,6 @@
 #include "BoundedPID.hpp"
 
-BoundedPID::BoundedPID(PID_Config config, int initial, int lower, int upper){
+BoundedPID::BoundedPID(PID_Config* config, int initial, int lower, int upper){
     pid = PID(config);
     lowerBound = lower;
     upperBound = upper;

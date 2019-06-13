@@ -14,7 +14,7 @@ class PID{
   
   public:
 
-    PID(PID_Config config);
+    PID(PID_Config* config);
     int next(int measured);
     int current();
     void setTarget(int target);
@@ -22,7 +22,7 @@ class PID{
 
   private:
 
-    PID_Config config;
+    PID_Config* config;
     int currentValue;
     int valueBuf[BUFFER_SIZE];
     int index;
