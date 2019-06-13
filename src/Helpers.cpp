@@ -1,7 +1,5 @@
 //definitions for vscode, can be deleted for arduino
-#define uint8_t char
-#define int16_t int
-#define uint16_t uint
+
 
 #ifdef unix
 #include "Pixy2/Pixy2.h"
@@ -20,6 +18,10 @@
 #define max(a,b) (a < b ? b : a)
 #define analogWrite(a,b); 
 #define digitalWrite(a,b); 
+
+#define uint8_t char
+#define int16_t int
+#define uint16_t uint
 
 #define println(a);
 #define print(a);
