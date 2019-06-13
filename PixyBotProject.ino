@@ -7,7 +7,7 @@
 #ifdef unix
 #include "src/BoundedPID.hpp"
 #include "src/MotorControl.hpp"
-#include "src/Helpers.cpp"
+
 #else 
 #include "src\BoundedPID.hpp"
 #include "src\MotorControl.hpp"
@@ -16,25 +16,10 @@
 
 enum State {Waiting, Searching, Following};
 
-MotorControl motorcontrol = 
-  MotorControl(
-    new Motor(
-      SPEEDPIN_B,
-      MOTORSHIELD_IN4,
-      MOTORSHIELD_IN3),
-    new Motor(
-      SPEEDPIN_A,
-      MOTORSHIELD_IN1,
-      MOTORSHIELD_IN2));
+MotorControl motorcontrol;
 
 Pixy2 pixyCore;
 Pixy2CCC<Link2SPI> pixy = pixyCore.ccc; 
-
-int signature = 0;    //Nr of signature
-int x = 0;            //positon x axis
-int y = 0;            //position y axis
-int width = 0;        //object's width
-int height = 0;       //object's height
 
 State state;
 
@@ -49,11 +34,55 @@ const int TARGETSIZE = 90;
 const int SPEED_FACTOR = 2;
 const int CLEAR_COUNT = 30;
 const int SPEED_LIMIT = 200;
+const int PAN_LIMIT
 
 
 int following_x, following_y;
 
 
+
+void initializePIDControllers(){
+  PanController = new BoundedPID(new PID_Config{
+    p:30,
+    i: 10,
+    d: 0,
+    target: PAN_LIMIT / 2,
+    lowerBound: -200,
+    upperBound: 200},
+    500, //initial value
+    50, //lowerBound
+    950); // upperBound
+
+  TiltController = new BoundedPID(new PID_Config{
+    p: 30,
+    i: 10,
+    d: 0,
+    target: pixyCore.frameHeight / 2,
+    divider: 55,
+    lowerBound: -200,
+    upperBound: 200}, 
+    500, //initial value
+    50, //lowerBound
+    950); // upperBound
+
+  SpeedController = new PID(new PID_Config{
+    p: -20,
+    i: -0,
+    d: -0,
+    target: TARGETSIZE,
+    divider: 10,
+    lowerBound: -127,
+    upperBound: 127});
+
+  RotationController  = new PID(new PID_Config{
+    p: 20,
+    i: 10,
+    d: 0,
+    target: pixyCore.frameWidth / 2,
+    divider: 20,
+    lowerBound: -50,
+    upperBound: 50});
+}
 
 
 void setup()
@@ -66,43 +95,21 @@ void setup()
   for(int i = 5; i < 11; i++) pinMode(i, OUTPUT);
   ////print("Starting...\n");
   pixyCore.init();
-  PanController = new BoundedPID(PID_Config{
-    p:30,
-    i: 10,
-    d: 0,
-    target: PAN_LIMIT / 2,
-    lowerBound: -200,
-    upperBound: 200},
-    500, 
-    50, 
-    950);
-  TiltController = new BoundedPID(PID_Config{
-    p: 30,
-    i: 10,
-    d: 0,
-    target: pixyCore.frameHeight / 2,
-    divider: 55,
-    lowerBound: -200,
-    upperBound: 200}, 
-    500, 
-    50, 
-    9500);
-  SpeedController = new PID(PID_Config{
-    p: -20,
-    i: -0,
-    d: -0,
-    target: TARGETSIZE,
-    divider: 10,
-    lowerBound: -127,
-    upperBound: 127});
-  RotationController  = new PID(PID_Config{
-    p: 20,
-    i: 10,
-    d: 0,
-    target: pixyCore.frameWidth / 2,
-    divider: 20,
-    lowerBound: -50,
-    upperBound: 50});
+
+  motorcontrol = 
+    MotorControl(
+      new Motor(
+        SPEEDPIN_B,
+        MOTORSHIELD_IN4,
+        MOTORSHIELD_IN3),
+      new Motor(
+        SPEEDPIN_A,
+        MOTORSHIELD_IN1,
+        MOTORSHIELD_IN2));
+
+  initializePIDControllers();
+
+  
   state = Waiting;
 }
 
@@ -165,32 +172,32 @@ void following(uint16_t blocks) {
 
   int16_t speedBuff, rotationBuff;
   int16_t speedLeft, speedRight;
-  uint16_t maxSize, index;
+  int pan, tilt;
 
-  //Größtes Rechteck finden
+  //find the biggest block in our simple case
   Block current = findSingleBlockRepresentation(blocks, pixy.blocks);
 
+  //detemines the perceivedsize, which is measured against the targetsize as a 
+  //measure of distance for the speed controller, as a simple maximum of both 
+  //side length.
+  int perceivedsize = max(current.m_height, current.m_width);
+
   ////println("Combined: ");
-  printBlock(&current);
-  x = current.m_x;                    //get x position
-  y = current.m_y;                    //get y position
-  width = current.m_width;            //get width
-  height = current.m_height;          //get height
+  //printBlock(&current);  
 
+  //feed Infos to the relevant controllers
+  tilt = TiltController->next(current.m_y);
+  pan = PanController->next(current.m_x);
 
-
-  
-
-  tilt = TiltController->next(y);
-  pan = PanController->next(x);
-
-  int perceivedsize = max(height, width);
   speedBuff = SpeedController->next(perceivedsize);
   rotationBuff = RotationController->next(pan);
 
+  //calculate the speed for the different tires
   speedLeft = speedBuff + rotationBuff;
   speedRight = speedBuff - rotationBuff;
-  
+
+  //print resulting commands
+  /*
   print("left: ");
   println(speedLeft);
   print("right: ");
@@ -198,32 +205,39 @@ void following(uint16_t blocks) {
   print("tilt: ");
   println(tilt);
   println();
+   */
+  //give the commands to the motorcontrol and transmit it via SPI to the pixy
   motorcontrol.drive(speedLeft, speedRight);
   pixyCore.setServos(pan, tilt);
 
 }
 
-
+//idleing bevor taking further actions when no blocks are detected
 void waiting() {
   idleCount++;
   motorcontrol.drive(0,0);
   delay(100);
 }
 
+//search routine to find a block after waiting has been proven futile
 void searching() {
   pixyCore.setServos(following_x, following_y);
   motorcontrol.drive(0,0);
+  //the search routine moves the pixy camera to different points to search the 
+  //whole field of view of the pixy camera
   if ( following_x < 900)
     following_x += 267;
   else {
-    if (following_y < 900)
+    if (following_y <= 900)
       following_y += 400;
     else
       following_y = 100;
 
     following_x = 100;
+    //extra delay because the pixy has to travel to the opposite side
     delay(200);
   }
+  //wait so that the pixy can pick up a new target
   delay(500);
 
 }
