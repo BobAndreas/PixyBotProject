@@ -1,13 +1,13 @@
 #include "BoundedPID.hpp"
 
 BoundedPID::BoundedPID(PID_Config* config, int initial, int lower, int upper){
-    pid = PID(config);
+    pid = new PID(config);
     lowerBound = lower;
     upperBound = upper;
     setCurrent(initial);
 }
 void BoundedPID::clearBuf(){
-    pid.clearBuf();
+    pid->clearBuf();
 }
 
 int BoundedPID::setCurrent(int value){
@@ -21,7 +21,7 @@ int BoundedPID::setCurrent(int value){
 }
 
 int BoundedPID::next(int value){
-    int potentialNext = pid.next(value) + current;
+    int potentialNext = pid->next(value) + current;
     return setCurrent(potentialNext);
     
 }

@@ -16,9 +16,8 @@ PID::PID(PID_Config* config){
 int PID::next(int measured){
   int difference = measured - config->target;
   int sum = 0;
-  int scale = 1;
-  for(int i = index; i < BUFFER_SIZE; i++){
-    sum += valueBuf[(i + index)%BUFFER_SIZE] * (BUFFER_SIZE - i) ;
+  for(int i = 0; i < BUFFER_SIZE; i++){
+    sum += valueBuf[(i + index)%BUFFER_SIZE] * (BUFFER_SIZE - i);
   }
   
   currentValue = (config->p * difference + config->i * sum / historyScale + config->d * (difference - valueBuf[index])) / config->divider;

@@ -2,7 +2,7 @@
 
 
 class BoundedPID {
-    PID pid;
+    PID* pid;
     int current, lowerBound, upperBound;
 
     public:

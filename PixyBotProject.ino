@@ -11,7 +11,7 @@
 #else 
 #include "src\BoundedPID.hpp"
 #include "src\MotorControl.hpp"
-#include "src\Helpers.cpp"
+
 #endif
 
 enum State {Waiting, Searching, Following};
@@ -47,6 +47,7 @@ void initializePIDControllers(){
     i: 10,
     d: 0,
     target: PAN_LIMIT / 2,
+    divider: 40,
     lowerBound: -200,
     upperBound: 200},
     500, //initial value
