@@ -1,0 +1,17 @@
+Aufbau
+
+TPixy -> Kommunikationskanal unabhängige Implementierung der Kernfunktionalität Pixy Kommunikation
+
+Pixy2.h -> SPI kommunikation mit dem Pixy2
+Pixy2I2C -> I2C Kommunikation
+Pixy2SPI_SS.h -> SPI Kommunikation mit mehreren Slaves die über slave select pins ausgewählt werden können
+Pixy2UART.h -> UART Kommunikation
+
+
+Pixy2CCC.h -> Bietet Color Connected Components Funktionsumfang an
+Pixy2Line.h -> Biete Funktionalität um einer Linie zu folgen.
+Pixy2Video.h -> Videoübertragungsmodus
+
+
+
+Funktionsumfang
