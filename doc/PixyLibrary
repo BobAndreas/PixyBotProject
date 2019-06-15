@@ -1,15 +1,53 @@
 Aufbau
 
-TPixy -> Kommunikationskanal unabhängige Implementierung der Kernfunktionalität Pixy Kommunikation
-
-Pixy2.h -> SPI kommunikation mit dem Pixy2
-Pixy2I2C -> I2C Kommunikation
-Pixy2SPI_SS.h -> SPI Kommunikation mit mehreren Slaves die über slave select pins ausgewählt werden können
-Pixy2UART.h -> UART Kommunikation
+TPixy 
+Dies ist eine Templateklasse, die noch eine Verbindungsart benötigt, um eine vollständige Klass zu bilden. Diese Klasse implementiert das gesammte Kommunikationsprotokoll mit dem Pixie, unabhängig von der physikalischen Übertragung. Die Klasse, die die Verbindungsart bereitstellt muss nur die Methoden zum Öffnene und Schließen der Verbindung, sowie zum Senden und Empfangen einer gewissen Menge von Bytes zur Verfügung stellen. Das Empfangen muss auch eine Checksummenüberprüfung bereitstellen. Desweiteren wird in TPixy auch weitere gemeinsame Funktionalität, wie das Verfahren der an den Pixie angeschlossenen Servomotoren, die unabhängig von dem Ausgeführten Programm auf dem Pixie nützlich sind, implementiert.
 
 
+
+Ein wichtiger Hinweis für die Benutzung dieser Klasse und, in Anbetracht der zentalen Rolle dieser Klasse, für die gesammte Bibliothek ist, dass die gesammte Kommunikation und Informationsspeicherung einen geteilten Buffer verwendet. Möchte man also mehrere Daten von dem Pixy erfragen und diese gemeinsam verwenden ist man gut beraten, die Daten aus jeder Abfrage an eine andere Stelle zu kopieren, bevor man den nächsten Befehl an den Pixy sendet, da hierfür unausweichlich die alten Daten, zumindest teilweise, überschrieben werden. Wenn man dies nicht beachtet führt dies schnell zu, auf den ersten Blick schwer verständlichen, Fehlern. Das liegt vorallem an daran, dass Klassen als Abstraktionen dieser Klasse agieren können, wie zum Beispiel Pixy2CCC, die scheinbar eine Auflistung der gefundenen Blöcke bereitstellt. Dies ist im Endeeffekt aber einfach nur ein Pointer auf eben diesen Kommunikationsbuffer und keinen eigenen Speicherbereich. Sendet man nun beispielsweise einen Bewegungsbefehl an den Pixie wird zumindest ein Teil des Buffers überschrieben. Wenn man nun versucht auf die Blöck zuzugreifen, erhält man einen inkonsistente Datensatz. Die unterschiedlichen Länge der beiden Nachrichten erschwert die Fehlerfindung noch weiter, da große Teile des Buffers komplett unberührt bleiben von der zweiten Kommunikation und so auch noch viele Daten intakt sind. 
+
+
+init
+    Die Kommunikationsverbindung aufbauen. Und bis zu 5 Sekunden auf eine Reaktion des Pixies warten. Danach die Kameraauflösung einlesen.
+getSync
+    Auf sync Byte vom Pixy warten. Diese Byte markiert den Anfang einer Nachricht. Diesem Syncbyte wird auch entommen, ob eine Checksumme zu erwarten ist oder nicht.
+recvPacket
+    liest zu erst den Typ der zu erwartenden Nachricht, die Länge der Payload und ggf. die zu erwartende Prüfsumme. Danach werden die angegeben Anzahl an Payload bytes in den Buffer eingelsesen und ggf. die Prüfsumme überprüft.
+sendPacket
+    schreibt Nachricht das syncbyte, dass eine Nachricht ohne Checksumme impliziert als little Endian in den Buffer, gefolgt von dem Typ der Nachricht und der länge der Nachricht. Danach wird der Befehl an das Linkobjekt erteilt, die Nachricht zu versenden.
+changeProg
+    Den Befehl das Programm auf dem Pixy zu ändern und wartet auf eine positive Reaktion. Diese Prozedur wird endlos wiederholt, solange wir eine negative Reaktion des Pixies erhalten. Sollte jedoch schon beim erhalten der Nachricht ein Fehlerauftreten, wie zum Beispiel ein Checksummenfehler, wird Ausführung direkt abgebrochen. Bei einer positiven Reaktion des Pixies wird die ggf. geänderte Auflösung des Kamerastreams erfasst und die Schleife durchbrochen.
+getVersion
+    Erfragt die aktuelle Version des Pixies und legt sie in der eigenen Datensturktur ab.
+setCameraBrightness
+    Setzt die Belichtungszeit der Pixiekamera. Ein höhere Wert resultiert also in einem länger belichteten und damit hellerem Bild.
+getResolution
+    Fragt die Auflösung in Pixeln ab und speichert sie in den frameWidth und frameHeight Variablen ab.
+setServos
+    Sendet einen Befehl an den Pixy seine Motoren zu Verfahren. beide Argumente sind als Absolutwerte von 0 bis 1000 zu verstehen. Das erste Argument ist für die Drehung der Basis, wo eine 0 aus der Sicht des Pix ganz links bedeutet. Das zweite Argument gibt den Neigungswinkel des Pixies an, wo 0 ganz oben bedeutet.
+setLED
+    Kommuniziert mit dem Pixy, um die Farbe der RGB Led am Pixy auf den als Argumente übergebenen RGB Wert zu ändern.
+setLamp
+    Die beiden Argumente sind hier als binäre Steuerung für das Einschalten, beziehungsweise Ausschalten der Beleuchtung zu sehen. Der erste Parameter schaltet die beiden oberen LEDs des Pixies und der zweite, schaltet die RGB Led ggf. auf volle Helligkeit in weiß um als weitere Arbeitsleuchte zu fungieren.
+getFPS
+    Erfragt die aktuelle Bildwiederholrate des Pixies. Diese hängt von der Umgebungshelligkeit und damit der Belichtungszeit ab. Der Wert liegt immer zwische 2 und 62 Bildern pro Sekunde.
+
+
+Unterstützte Kommunikationsprotokolle
+Die folgenden Klassen implementieren jeweils die Kommunikation über die in der Tabelle nachstehende Protokolle und stellen eine mit der Datei gleichnahmige Klasse bereit, die eine Spezifizierung des TPixy Templates mit dem entsprechenden Kommunikationsprotokoll darstellt.
+
+Pixy2.h  |  SPI
+Pixy2I2C  |  I2C 
+Pixy2SPI_SS.h  |  SPI mit mehreren Slaves die über slave select
+Pixy2UART.h  |  UART Kommunikation
+
+Kommunikationsprotokolle erläutern #TODO???
+
+
+Interface für Programme auf dem Pixy
 Pixy2CCC.h -> Bietet Color Connected Components Funktionsumfang an
-Pixy2Line.h -> Biete Funktionalität um einer Linie zu folgen.
+Pixy2Line.h -> Biete Funktionalität um einer Linie zu folgen, inklusive Zeichen und Kreuzungserkennung.
 Pixy2Video.h -> Videoübertragungsmodus
 
 
