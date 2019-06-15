@@ -7,7 +7,7 @@
 #include <Pixy2.h>
 #include <Pixy2CCC.h>
 #include "BoundedPID.cpp"
-#include "MotorControl.hpp"
+#include "MotorControl.cpp"
 
 
 enum State {Waiting, Searching, Following};
