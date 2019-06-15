@@ -35,21 +35,35 @@ getFPS
 
 
 Unterstützte Kommunikationsprotokolle
-Die folgenden Klassen implementieren jeweils die Kommunikation über die in der Tabelle nachstehende Protokolle und stellen eine mit der Datei gleichnahmige Klasse bereit, die eine Spezifizierung des TPixy Templates mit dem entsprechenden Kommunikationsprotokoll darstellt.
+Die folgenden Klassen implementieren jeweils die Kommunikation über die in der Tabelle nachstehende Protokolle und stellen eine mit der Datei gleichnamige Klasse bereit, die eine Spezifizierung des TPixy Templates mit dem entsprechenden Kommunikationsprotokoll darstellt.
 
 Pixy2.h  |  SPI
 Pixy2I2C  |  I2C 
 Pixy2SPI_SS.h  |  SPI mit mehreren Slaves die über slave select
-Pixy2UART.h  |  UART Kommunikation
+Pixy2UART.h  |  UART
 
 Kommunikationsprotokolle erläutern #TODO???
 
 
 Interface für Programme auf dem Pixy
-Pixy2CCC.h -> Bietet Color Connected Components Funktionsumfang an
-Pixy2Line.h -> Biete Funktionalität um einer Linie zu folgen, inklusive Zeichen und Kreuzungserkennung.
-Pixy2Video.h -> Videoübertragungsmodus
+
+Color Connected Components
+
+Diese Programm wird von der Klasse Pixy2CCC in der Datei Pixy2CCC.h unterstützt. In dieser Datei wird auch die Struktur Block, die einen gefundenen zusammenhängeden Farbbereich als Rechteck in einem gewissen Pixelbereich darstellt definiert. Zu den Eigenschaften eines Blocks gehört vor allem die Informationen, zu welcher Farbsignatur ist dieser Block zugeordnet, wo liegt das Zentrum des Rechtecks in Pixeln von der Ecke oben links und wie weit und hoch ist das Rechteck. Des Weiteren versucht der Pixy auch Blöcke längerfristig einem Objekt zuzuordnen. Dafür führt er eine Tabelle und ordnet jedem Objekt einen festen Index zu, und merkt sich seit wie vielen Frames dieses Objekt erfasst ist. Auch diese Informationen werden in der Blockstruktur übertragen.
+Die einzige Funktionalität der PixyCCC Klasse ist die Funktion getBlocks, sie erfragt die Daten über die aktuell erkannten Blöcke vom Pixy und interpretiert die Antwort, sodass die Anzahl der erkannten Blöcke zurückgegeben wird und ein Zeiger auf den Buffer der internen TPixy Implementierung in die Instanzvariable blocks kopiert wird, da ab dort alle Blöcke eingetragen sind.
+
+Line 
+Das Line Programm auf dem Pixy ermöglicht es Linien, Kreuzungen und eine simple Form von Barcodes zu erkennen. Das Interface zu diesem Programm wird von der Klasse Pixy2Line in der gleichnamige .h-Datei implementiert. Die wichtigste Methode dieser Klasse, getMainFeatures, liefert den Vektor der Linie, der der Roboter im Moment folgt, und falls vorhanden die Abbiegungen und Barcodes, die vorraus sind, zurück. Jede Abbiegungen und jeder Barcodes wird in diesem Normalenmodus nur einemal zurückgegeben, so dass man in der Anwendung nur einmal eine Entscheidung treffen muss und sich nicht merken muss, welche Merkmale man bereits gesehen hat. Welcher Richtung der Roboter an der nächsten Abbiegungen folgen soll, kann man durch die zwei Methoden setNextTurn und setDefaultTurn beeinflussen. Aufgrund des Winkels, der als Argument an setDefaultTurn übergeben wird, entscheidet der Pixy automatisch, welchem Pfad einer Kreuzung er folgen soll, falls er keine anderen Instruktionen bekommt. Diese Entscheidung kann für die als nächstes folgende Kreuzung durch die Methode setNextTurn überschrieben werden, beispielsweise auf Reaktion auf einen Barcode. Um einen einfachen linienfolgenden Roboter selbst zu bauen muss man so nur noch eine Möglichkeit für den Roboter einbauen dem Hauptvektor zu folgen.
+Es gibt noch weitere Möglichkeiten, um das Verhalten das Linienerkennungs Programms zu steuern, falls man einen komplexeren Roboter gestallten möchte. beispielsweise kann man in dem man mit setMode den Modus LINE_MODE_MANUAL_SELECT auswählt, die automatische Auswahl der Linie verhindern und so eine feinere Kontrolle über das Verhalten des Roboters bekommen. Außerdem kann mit der Methode getAllFeatures auch einfach einen ungefilterten Blick auf alle möglichen Vektoren, Kreuzungen und Barcodes zu bekommen, um alles komplett selbstständig zu verwalten.
+
+Video
+
+Das Programm Video kann ganze Videoframes übertragen, aber leider nur über USB, also zum Beispiel an einen PC, über die dem Arduino zur Verfügung stehenden Schnittstellen ist dies leider nicht möglich. Deshlalb hat die Pixy2Video Klasse nur eine Funktion um den RGB-Wert eines Pixels oder genau genommen den durchschnitt einer fünf mal fünf großen Pixelgruppe mit dem Zentrum an einer spezifizierten Stelle zu bekommen. Diese Funktion heißt getRGB und soll laut dem Hersteller vorallem benutzt werden, falls die abzufragenden Positionen im vorraus bekannt sind, beispielsweise beim automatisierten lösen eines Rubikscubes, bei dem man nur das Zentrum jeder der 9 uns zugewandten Flächen angesehen werden muss. Theoretisch könnte man auch dieses Problem mit dem Color Connected Components Programm lösen, aber durch die Variante mit dem Video Programm ist das Problem erheblich einfacher zu lösen.
+
+
+Weitere Funktionalität #FIXME
+
+Die Library beinhaltet auch weiterreichende Funktionalität, beispielsweise eine Implementierung eines PID Reglers, eine Ansteuerung für eines mit PWM kontrollierten Motors und einige Benutzungsbeispiele. Diese weiteren Bestandteile haben wir mit Absicht außen vor gelassen, mit der einfachen Begründung, dass das Projekt sonst bei weitem nicht genügend Umfang gehabt hätte.
 
 
 
-Funktionsumfang
