@@ -102,7 +102,7 @@ void setup()
   for(int i = 5; i < 11; i++) pinMode(i, OUTPUT);
   ////Serial.print("Starting...\n");
   pixyCore.init();
-  pixyCore.changeProg("CCC");
+  pixyCore.changeProg("color_connected_components");
   
   
 
