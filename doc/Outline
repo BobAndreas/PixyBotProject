@@ -23,6 +23,7 @@ Entwurfsphase
     Regelungstechnik (Tadday)
         PID
     Ansteuerung der Motoren über extra Controller(Niggemann)
+        http://wiki.seeedstudio.com/4A_Motor_Shield/
     StateMachine // kann man gut mit einem Diagramm darstellen (Tadday)
 
 
