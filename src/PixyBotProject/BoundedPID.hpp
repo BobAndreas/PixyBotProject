@@ -2,8 +2,9 @@
 //  Authors: A. Niggemann, J. Illigens, P. Tadday
 //  Date: 02.05.2019
 
-
-#include "PID.cpp"
+#ifndef BoundedPID_hpp
+#define BoundedPID_hpp
+#include "PID.hpp"
 
 class BoundedPID {
     PID* pid;
@@ -15,3 +16,4 @@ class BoundedPID {
     void clearBuf();
     int setCurrent(int current);
 };
+#endif

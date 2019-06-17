@@ -2,7 +2,8 @@
 //  Authors: A. Niggemann, J. Illigens, P. Tadday
 //  Date: 02.05.2019
 
-
+#ifndef MotorControl_hpp
+#define MotorControl_hpp
 #define MOTORSHIELD_IN1  5
 #define MOTORSHIELD_IN2 6
 #define MOTORSHIELD_IN3 7
@@ -48,3 +49,4 @@ class MotorControl
   Motor* right;
 };
 
+#endif

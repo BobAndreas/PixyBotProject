@@ -1,7 +1,8 @@
 //  TH-OWL, Bachelor Technische Informatik, 4. Semester, Projektarbeit Prof. Korte
 //  Authors: A. Niggemann, J. Illigens, P. Tadday
 //  Date: 02.05.2019
-
+#ifndef PID_hpp
+#define PID_hpp
 
 #define BUFFER_SIZE 5
 
@@ -33,3 +34,5 @@ class PID{
     //int historyScale;
 
 };
+
+#endif
