@@ -49,25 +49,25 @@ int following_x, following_y;
 
 void initializePIDControllers(){
   PanController = new BoundedPID(new PID_Config{
-    p:30,
-    i: 10,
-    d: 0,
-    target: PAN_LIMIT / 2,
-    divider: 40,
-    lowerBound: -200,
-    upperBound: 200},
-    500, //initial value
+    p:-50,
+    i: -1,
+    d: -20,
+    target: pixyCore.frameWidth / 2,
+    divider: 100,
+    lowerBound: -20,
+    upperBound: 20},
+    PAN_LIMIT / 2,, //initial value
     50, //lowerBound
     950); // upperBound
 
   TiltController = new BoundedPID(new PID_Config{
-    p: 30,
+    p: 50,
     i: 10,
-    d: 0,
+    d: 20,
     target: pixyCore.frameHeight / 2,
-    divider: 55,
-    lowerBound: -200,
-    upperBound: 200}, 
+    divider: 50,
+    lowerBound: -20,
+    upperBound: 20}, 
     500, //initial value
     50, //lowerBound
     950); // upperBound
@@ -77,15 +77,15 @@ void initializePIDControllers(){
     i: -0,
     d: -0,
     target: TARGETSIZE,
-    divider: 10,
+    divider: 100,
     lowerBound: -127,
     upperBound: 127});
 
   RotationController  = new PID(new PID_Config{
-    p: 20,
-    i: 10,
+    p: -30,
+    i: -1,
     d: 0,
-    target: pixyCore.frameWidth / 2,
+    target: PAN_LIMIT / 2,
     divider: 20,
     lowerBound: -50,
     upperBound: 50});
@@ -103,13 +103,12 @@ void setup()
   ////Serial.print("Starting...\n");
   pixyCore.init();
   pixyCore.changeProg("color_connected_components");
-  
-  
 
   initializePIDControllers();
 
-  
   state = Waiting;
+
+  pixyCore.setServos(PAN_LIMIT / 2, PAN_LIMIT / 2);
 }
 
 void loop()
@@ -121,18 +120,16 @@ void loop()
       if (blocks > 0) {
         state = Following;
         idleCount = 0;
-        break;
-      } else {
-        if (idleCount > CLEAR_COUNT) {
-          idleCount = 0;
-          state = Searching;
-          TiltController->clearBuf();     //clears buffer
-          SpeedController->clearBuf();    //clears buffer
-          RotationController->clearBuf(); //clears buffer
-          following_x = 100;
-          following_y = 100;
-          break;
-        }
+      } 
+      else if (idleCount > CLEAR_COUNT) {
+        idleCount = 0;
+        TiltController->clearBuf();     //clears buffer
+        SpeedController->clearBuf();    //clears buffer
+        RotationController->clearBuf(); //clears buffer
+        following_x = 100;
+        following_y = 100;
+          
+        state = Searching;
       }
       break;
     case Searching:
@@ -144,6 +141,7 @@ void loop()
       }
       break;
     case Following:
+      //no block found or an error occured
       if (blocks <= 0) {
         state = Waiting; 
       }
