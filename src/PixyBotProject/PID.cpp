@@ -35,7 +35,7 @@ int PID::next(int measured){
   integral = limit(integral + difference, -maxIntegral, maxIntegral);
   
   //currentValue = (config->p * difference + config->i * sum / historyScale + config->d * (difference - valueBuf[index])) / config->divider;
-  currentValue = limit(difference * config->p + integral * config->i + difference-lastDifference * config->d, config->lowerBound, config->upperBound);
+  currentValue = limit((difference * config->p + integral * config->i + difference-lastDifference * config->d) / config->divider, config->lowerBound, config->upperBound);
   //Vermeidung von extremen Werten: currentValue wird nicht größer als upperBound und nicht kleiner als lowerBound 
   // if (currentValue < config->lowerBound)
   //   currentValue = config->lowerBound;
