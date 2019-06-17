@@ -56,7 +56,7 @@ void initializePIDControllers(){
     divider: 100,
     lowerBound: -20,
     upperBound: 20},
-    PAN_LIMIT / 2,, //initial value
+    PAN_LIMIT / 2, //initial value
     50, //lowerBound
     950); // upperBound
 
