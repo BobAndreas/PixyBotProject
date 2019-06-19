@@ -1,10 +1,25 @@
 #include "MotorControl.hpp"
 
+enum Movement {Forward, Standing, Backwards};
+class Motor{
+  public:
 
-Motor::Motor(uint8_t speedPin, uint8_t forwardPin, uint8_t backwardPin){
-  this->speedPin = speedPin;
-  this->forwardPin = forwardPin;
-  this->backwardPin = backwardPin;
+  Motor(MotorConfig* config);
+  void drive(int speed);
+  
+  private:
+  uint8_t speedPin;
+  uint8_t forwardPin;
+  uint8_t backwardPin;
+
+  Movement direction;
+  
+};
+
+Motor::Motor(MotorConfig* config){
+  this->speedPin = config->speedPin;
+  this->forwardPin = config->forwardPin;
+  this->backwardPin = config->backwardPin;
 }
 
 ///Holds the main logic for driving a single motor
@@ -31,10 +46,10 @@ void Motor::drive(int speed){
    }
 }
 
-MotorControl::MotorControl(Motor* left, Motor* right){
+MotorControl::MotorControl(MotorConfig* left, MotorConfig* right){
   
-  this->left = left;
-  this->right = right;
+  this->left = new Motor(left);
+  this->right = new Motor(right);
 }
 
 

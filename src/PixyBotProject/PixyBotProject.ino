@@ -14,14 +14,14 @@ enum State {Waiting, Searching, Following};
 
 MotorControl motorcontrol = 
     MotorControl(
-      new Motor(
-        SPEEDPIN_B,
-        MOTORSHIELD_IN4,
-        MOTORSHIELD_IN3),
-      new Motor(
-        SPEEDPIN_A,
-        MOTORSHIELD_IN1,
-        MOTORSHIELD_IN2));
+      new MotorConfig{
+        speedPin: SPEEDPIN_B,
+        forwardPin: MOTORSHIELD_IN4,
+        backwardPin: MOTORSHIELD_IN3},
+      new MotorConfig{
+        speedPin: SPEEDPIN_A,
+        forwardPin: MOTORSHIELD_IN1,
+        backwardPin: MOTORSHIELD_IN2});
 
 Pixy2 pixyCore;
 Pixy2CCC<Link2SPI> pixy = Pixy2CCC(&pixyCore);

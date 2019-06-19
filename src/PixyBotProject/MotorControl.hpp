@@ -3,6 +3,7 @@
 //  Date: 02.05.2019
 
 #ifndef MotorControl_hpp
+#include <arduino.h>
 #define MotorControl_hpp
 #define MOTORSHIELD_IN1  5
 #define MOTORSHIELD_IN2 6
@@ -15,25 +16,13 @@
 
 
 
-enum Movement {Forward, Standing, Backwards};
-
-/*
-Abstraction over a single Motor
- */
-class Motor{
-  public:
-
-  Motor(uint8_t speedPin, uint8_t forwardPin, uint8_t backwardPin);
-  void drive(int speed);
-  
-  private:
+struct MotorConfig{
   uint8_t speedPin;
   uint8_t forwardPin;
   uint8_t backwardPin;
+}
 
-  Movement direction;
-  
-};
+class Motor;
 
 /*
 Is used as an interface in client code to control the two motors add once
@@ -41,8 +30,8 @@ Is used as an interface in client code to control the two motors add once
 class MotorControl
 {
   public:
-  MotorControl(Motor* speed, Motor* rotation);
-  void drive(int speedLeft, int speedRight);
+  MotorControl(MotorConfig* left, MotorConfig* right);
+  void drive(int speed, int rotation);
   
   private:
   Motor* left;
