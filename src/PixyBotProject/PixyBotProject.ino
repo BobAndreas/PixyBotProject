@@ -24,7 +24,7 @@ MotorControl motorcontrol =
         backwardPin: MOTORSHIELD_IN2});
 
 Pixy2 pixyCore;
-Pixy2CCC<Link2SPI> pixy = Pixy2CCC(&pixyCore);
+Pixy2CCC<Link2SPI> pixy = Pixy2CCC<Link2SPI>(&pixyCore);
 
 
 State state;
@@ -44,49 +44,50 @@ const int PAN_LIMIT = 1000;
 
 
 int following_x, following_y;
+//long timer, lasttimer;
 
 
 
 void initializePIDControllers(){
   PanController = new BoundedPID(new PID_Config{
-    p:-50,
-    i: -1,
-    d: -20,
+    p:-40,
+    i: 0,
+    d:-40,
     target: pixyCore.frameWidth / 2,
     divider: 100,
-    lowerBound: -20,
-    upperBound: 20},
+    lowerBound: -2000,
+    upperBound: 2000},
     PAN_LIMIT / 2, //initial value
     50, //lowerBound
     950); // upperBound
 
   TiltController = new BoundedPID(new PID_Config{
-    p: 50,
-    i: 10,
-    d: 20,
+    p: 40,
+    i: 0,
+    d: 50,
     target: pixyCore.frameHeight / 2,
-    divider: 50,
-    lowerBound: -20,
-    upperBound: 20}, 
+    divider: 100,
+    lowerBound: -2000,
+    upperBound: 2000}, 
     500, //initial value
     50, //lowerBound
     950); // upperBound
 
   SpeedController = new PID(new PID_Config{
-    p: -20,
+    p: -40,
     i: -0,
     d: -0,
     target: TARGETSIZE,
-    divider: 100,
+    divider: 20,
     lowerBound: -127,
     upperBound: 127});
 
   RotationController  = new PID(new PID_Config{
-    p: -30,
+    p: -15,
     i: -1,
     d: 0,
     target: PAN_LIMIT / 2,
-    divider: 20,
+    divider: 50,
     lowerBound: -50,
     upperBound: 50});
 }
@@ -107,7 +108,7 @@ void setup()
   initializePIDControllers();
 
   state = Waiting;
-
+  
   pixyCore.setServos(PAN_LIMIT / 2, PAN_LIMIT / 2);
 }
 
@@ -151,18 +152,24 @@ void loop()
   
   switch (state) {
     case Searching:
-      Serial.println("Searching");
+      //Serial.println("Searching");
       searching();
       break;
     case Following:
-      Serial.println("Following");
+      //Serial.println("Following");
       following(blocks);
       break;
     case Waiting:
-      Serial.println("Waiting");
+      //Serial.println("Waiting");
       waiting();
         break;
     }
+  /* 
+    timer = millis();
+    
+    Serial.println(timer-lasttimer);
+    lasttimer = timer;
+  */
 }
 
 void following(uint16_t blocks) {
@@ -221,21 +228,21 @@ void searching() {
   //whole field of view of the pixy camera
   if ( following_x < 900)
     following_x += 267;
-  else {
-    if (following_y <= 900)
+  else{  
+    if (following_y < 900)
       following_y += 400;
     else
       following_y = 100;
-
+  
     following_x = 100;
     //extra delay because the pixy has to travel to the opposite side
     delay(200);
+    
   }
   //wait so that the pixy can pick up a new target
   delay(500);
 
 }
-
 
 Block findSingleBlockRepresentation(int16_t blockcount, Block* blocks) {
   int16_t maxSize, index;
@@ -277,6 +284,3 @@ void printBlock(Block* block) {
   Serial.println(max(block->m_height, block->m_width));
 
 }
-
-
-
