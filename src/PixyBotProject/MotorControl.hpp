@@ -23,13 +23,13 @@ Abstraction over a single Motor
 class Motor{
   public:
 
-  Motor(uint8_t analog, uint8_t digital1, uint8_t digital2);
+  Motor(uint8_t speedPin, uint8_t forwardPin, uint8_t backwardPin);
   void drive(int speed);
   
   private:
-  uint8_t analog;
-  uint8_t digital1;
-  uint8_t digital2;
+  uint8_t speedPin;
+  uint8_t forwardPin;
+  uint8_t backwardPin;
 
   Movement direction;
   

@@ -1,10 +1,10 @@
 #include "MotorControl.hpp"
 
 
-Motor::Motor(uint8_t analog, uint8_t digital1, uint8_t digital2){
-  this->analog = analog;
-  this->digital1 = digital1;
-  this->digital2 = digital2;
+Motor::Motor(uint8_t speedPin, uint8_t forwardPin, uint8_t backwardPin){
+  this->speedPin = speedPin;
+  this->forwardPin = forwardPin;
+  this->backwardPin = backwardPin;
 }
 
 ///Holds the main logic for driving a single motor
@@ -21,13 +21,13 @@ void Motor::drive(int speed){
   
   if(direction != Standing){  
     bool forward = direction == Forward;
-    digitalWrite(digital1, forward);
-    digitalWrite(digital2, not forward);
+    digitalWrite(forwardPin, forward);
+    digitalWrite(backwardPin, not forward);
     
-    analogWrite(analog, abs(speed)); 
+    analogWrite(speedPin, abs(speed)); 
    }
    else {
-     analogWrite(analog, 0);
+     analogWrite(speedPin, 0);
    }
 }
 
@@ -45,7 +45,7 @@ void MotorControl::drive(int speed, int rotation){
   //calculate the speed for the different tires
   int speedLeft = speed + rotation;
   int speedRight = speed - rotation;
-  
+
   left->drive(speedLeft);
   right->drive(speedRight);
 }
