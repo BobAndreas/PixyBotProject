@@ -30,12 +30,7 @@ class PID{
     int maxIntegral;
     int integral;
     int lastDifference;
-    //int index;if(value > upperBound)
-        current = upperBound;
-    else if(value < lowerBound)
-        current = lowerBound;
-    else
-        current = value;
+    //int index;
     //int historyScale;
 
 };
