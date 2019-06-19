@@ -21,7 +21,9 @@ Analysephase
     Anforderungsanalyse (Tadday)✔
 Entwurfsphase
     Regelungstechnik (Tadday)
+    https://www.ifr.ing.tu-bs.de/static/files/lehre/vorlesungen/gdr/Skript_GdR.pdf
         PID
+        BoundedPID
     Ansteuerung der Motoren über extra Controller(Niggemann)
         http://wiki.seeedstudio.com/4A_Motor_Shield/
     StateMachine // kann man gut mit einem Diagramm darstellen (Tadday)
