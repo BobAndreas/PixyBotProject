@@ -26,12 +26,9 @@ class PID{
     PID_Config* config;
     int currentValue;
     
-    //int valueBuf[BUFFER_SIZE];
     int maxIntegral;
     int integral;
     int lastDifference;
-    //int index;
-    //int historyScale;
 
 };
 
