@@ -39,8 +39,13 @@ MotorControl::MotorControl(Motor* left, Motor* right){
 
 
 
-void MotorControl::drive(int speedLeft, int speedRight){
+void MotorControl::drive(int speed, int rotation){
   //Hystereseschaltung für die Aktivierung der Motoren
+
+  //calculate the speed for the different tires
+  int speedLeft = speed + rotation;
+  int speedRight = speed - rotation;
+  
   left->drive(speedLeft);
   right->drive(speedRight);
 }

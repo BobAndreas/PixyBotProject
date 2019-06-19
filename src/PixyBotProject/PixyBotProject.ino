@@ -56,7 +56,7 @@ void initializePIDControllers(){
     divider: 100,
     lowerBound: -20,
     upperBound: 20},
-    PAN_LIMIT / 2,, //initial value
+    PAN_LIMIT / 2, //initial value
     50, //lowerBound
     950); // upperBound
 
@@ -189,9 +189,6 @@ void following(uint16_t blocks) {
   speedBuff = SpeedController->next(perceivedsize);
   rotationBuff = RotationController->next(pan);
 
-  //calculate the speed for the different tires
-  speedLeft = speedBuff + rotationBuff;
-  speedRight = speedBuff - rotationBuff;
 
   //print resulting commands
   /*
@@ -204,7 +201,7 @@ void following(uint16_t blocks) {
   Serial.println();
    */
   //give the commands to the motorcontrol and transmit it via SPI to the pixy
-  motorcontrol.drive(speedLeft, speedRight);
+  motorcontrol.drive(speedBuff, rotationBuff);
   pixyCore.setServos(pan, tilt);
 
 }

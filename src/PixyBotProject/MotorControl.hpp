@@ -41,7 +41,7 @@ Is used as an interface in client code to control the two motors add once
 class MotorControl
 {
   public:
-  MotorControl(Motor* left, Motor* right);
+  MotorControl(Motor* speed, Motor* rotation);
   void drive(int speedLeft, int speedRight);
   
   private:
