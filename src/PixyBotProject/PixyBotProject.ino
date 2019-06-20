@@ -104,7 +104,7 @@ void setup()
   /*Configure the motor B to control the wheel at the left side.*/
 
   
-  Serial.begin(9600);
+  //Serial.begin(9600);
   for(int i = 5; i < 11; i++) pinMode(i, OUTPUT);
   ////Serial.print("Starting...\n");
   pixyCore.init();
@@ -234,10 +234,12 @@ struct Point
 Point[] targets = Point[]{ 
   Point{x: 100, y:100},
   Point{x: 900, y:100},
-  Point{x: 900, y:500},
-  Point{x: 100, y:500},
-  Point{x: 100, y:900},
-  Point{x: 900, y:900}};
+  Point{x: 900, y:366},
+  Point{x: 100, y:366},
+  Point{x: 100, y:633},
+  Point{x: 900, y:633},
+  Point{x: 900, y:900},
+  Point{x: 100, y:900}};
 //search routine to find a block after waiting has been proven futile
 void searching() {
   motorcontrol.drive(0,0);
@@ -252,9 +254,7 @@ void searching() {
   pixyCore.setServos(currentX, currentY);
 
   if(currentX == targets[targetindex].x && currentY == targets[targetindex].y)
-    targetindex = (targetindex +1) % 6;
-
-
+    targetindex = (targetindex +1) % (sizeof(target) / sizeof(Point));
 
 }
 
