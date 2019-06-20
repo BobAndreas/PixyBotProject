@@ -145,7 +145,7 @@ void loop()
         //update the current value in the controllers because they have been moved in the searching phase
 
         PanController->setCurrent(currentX);
-        TiltControllerq->setCurrent(currentY);
+        TiltController->setCurrent(currentY);
 
         state = Following;
       }
@@ -231,7 +231,7 @@ struct Point
   int x,y;
 };
 
-Point[] targets = Point[]{ 
+Point[] targets = { 
   Point{x: 100, y:100},
   Point{x: 900, y:100},
   Point{x: 900, y:500},
