@@ -38,22 +38,28 @@ Setzt die Belichtungszeit der Pixiekamera. Ein höhere Wert resultiert in einem 
 
 getResolution
 
-Fragt die Auflösung in Pixeln ab und speichert sie in den frameWidth und frameHeight Variablen des Pixies ab. Sie wird bei der Initialisierung des Pixies und bei Änderungen des auf dem Pixy laufenden Programms aufgerufen, um den 
+Fragt die Auflösung in Pixeln ab und speichert sie in den frameWidth und frameHeight Variablen des Pixies ab. Sie wird bei der Initialisierung des Pixies und bei Änderungen des auf dem Pixy laufenden Programms aufgerufen, um die sich die möglicherweise geänderte Auflösung auszulesen;
 
 setServos
 
 Sendet einen Befehl an den Pixy seine Motoren zu Verfahren. beide Argumente sind als Absolutwerte von 0 bis 1000 zu verstehen. Das erste Argument ist für die Drehung der Basis, wo eine 0 aus der Sicht des Pix ganz links bedeutet. Das zweite Argument gibt den Neigungswinkel des Pixies an, wo 0 ganz oben bedeutet.
 
 setLED
-    Kommuniziert mit dem Pixy, um die Farbe der RGB Led am Pixy auf den als Argumente übergebenen RGB Wert zu ändern.
+
+Kommuniziert mit dem Pixy, um die Farbe der RGB Led am Pixy auf den als Argumente übergebenen RGB Wert zu ändern.
+
 setLamp
-    Die beiden Argumente sind hier als binäre Steuerung für das Einschalten, beziehungsweise Ausschalten der Beleuchtung zu sehen. Der erste Parameter schaltet die beiden oberen LEDs des Pixies und der zweite, schaltet die RGB Led ggf. auf volle Helligkeit in weiß um als weitere Arbeitsleuchte zu fungieren.
+
+Die beiden Argumente sind hier als binäre Steuerung für das Einschalten, beziehungsweise Ausschalten der Beleuchtung zu sehen. Der erste Parameter schaltet die beiden oberen LEDs des Pixies und der zweite, schaltet die RGB Led auf volle Helligkeit in weiß um als weitere Arbeitsleuchte zu fungieren.
+
 getFPS
-    Erfragt die aktuelle Bildwiederholrate des Pixies. Diese hängt von der Umgebungshelligkeit und damit der Belichtungszeit ab. Der Wert liegt immer zwische 2 und 62 Bildern pro Sekunde.
+
+Erfragt die aktuelle Bildwiederholrate des Pixies. Diese hängt von der Umgebungshelligkeit und damit der Belichtungszeit ab. Der Wert liegt immer zwische 2 und 62 Bildern pro Sekunde.
 
 
 Unterstützte Kommunikationsprotokolle
-Die folgenden Klassen implementieren jeweils die Kommunikation über die in der Tabelle nachstehende Protokolle und stellen eine mit der Datei gleichnamige Klasse bereit, die eine Spezifizierung des TPixy Templates mit dem entsprechenden Kommunikationsprotokoll darstellt.
+
+Die folgenden Klassen implementieren jeweils die Kommunikation über die in der Tabelle nachstehende Protokolle und stellen einen mit der Datei gleichnamigen Typalias des TPixy Templates mit dem entsprechenden Kommunikationsprotokoll bereit. 
 
 Pixy2.h  |  SPI
 Pixy2I2C  |  I2C 
@@ -67,21 +73,22 @@ Interface für Programme auf dem Pixy
 
 Color Connected Components
 
-Diese Programm wird von der Klasse Pixy2CCC in der Datei Pixy2CCC.h unterstützt. In dieser Datei wird auch die Struktur Block, die einen gefundenen zusammenhängeden Farbbereich als Rechteck in einem gewissen Pixelbereich darstellt definiert. Zu den Eigenschaften eines Blocks gehört vor allem die Informationen, zu welcher Farbsignatur ist dieser Block zugeordnet, wo liegt das Zentrum des Rechtecks in Pixeln von der Ecke oben links und wie weit und hoch ist das Rechteck. Des Weiteren versucht der Pixy auch Blöcke längerfristig einem Objekt zuzuordnen. Dafür führt er eine Tabelle und ordnet jedem Objekt einen festen Index zu, und merkt sich seit wie vielen Frames dieses Objekt erfasst ist. Auch diese Informationen werden in der Blockstruktur übertragen.
-Die einzige Funktionalität der PixyCCC Klasse ist die Funktion getBlocks, sie erfragt die Daten über die aktuell erkannten Blöcke vom Pixy und interpretiert die Antwort, sodass die Anzahl der erkannten Blöcke zurückgegeben wird und ein Zeiger auf den Buffer der internen TPixy Implementierung in die Instanzvariable blocks kopiert wird, da ab dort alle Blöcke eingetragen sind.
+Diese Programm wird von der Klasse Pixy2CCC in der Datei Pixy2CCC.h unterstützt. In dieser Datei wird auch die Struktur Block, die einen gefundenen zusammenhängeden Farbbereich als Rechteck in einem gewissen Pixelbereich darstellt definiert. Zu den Eigenschaften eines Blocks gehört vor allem die Informationen, zu welcher Farbsignatur dieser Block zugeordnet ist, wo das Zentrum des Rechtecks in Pixeln relativ zur oberen linken Ecke des Kamerabildes liegt und wie weit und hoch das Rechteck ist. Des Weiteren versucht der Pixy auch Blöcke längerfristig einem Objekt zuzuordnen. Dafür führt er eine Tabelle und ordnet jedem Objekt einen festen Index zu und merkt sich seit wie vielen Frames dieses Objekt erfasst ist. Auch diese Informationen werden in der Blockstruktur übertragen.
+Die einzige Funktionalität der PixyCCC Klasse ist die Funktion getBlocks. Sie sendet die Anfrage an den Pixy und erfragt die Daten über die aktuell erkannten Blöcke vom Pixy und interpretiert die Antwort, sodass die Anzahl der erkannten Blöcke zurückgegeben wird und ein Zeiger auf den Buffer der internen TPixy Implementierung in die Instanzvariable blocks kopiert wird, da ab dort alle Blöcke eingetragen sind.
 
 Line 
-Das Line Programm auf dem Pixy ermöglicht es Linien, Kreuzungen und eine simple Form von Barcodes zu erkennen. Das Interface zu diesem Programm wird von der Klasse Pixy2Line in der gleichnamige .h-Datei implementiert. Die wichtigste Methode dieser Klasse, getMainFeatures, liefert den Vektor der Linie, der der Roboter im Moment folgt, und falls vorhanden die Abbiegungen und Barcodes, die vorraus sind, zurück. Jede Abbiegungen und jeder Barcodes wird in diesem Normalenmodus nur einemal zurückgegeben, so dass man in der Anwendung nur einmal eine Entscheidung treffen muss und sich nicht merken muss, welche Merkmale man bereits gesehen hat. Welcher Richtung der Roboter an der nächsten Abbiegungen folgen soll, kann man durch die zwei Methoden setNextTurn und setDefaultTurn beeinflussen. Aufgrund des Winkels, der als Argument an setDefaultTurn übergeben wird, entscheidet der Pixy automatisch, welchem Pfad einer Kreuzung er folgen soll, falls er keine anderen Instruktionen bekommt. Diese Entscheidung kann für die als nächstes folgende Kreuzung durch die Methode setNextTurn überschrieben werden, beispielsweise auf Reaktion auf einen Barcode. Um einen einfachen linienfolgenden Roboter selbst zu bauen muss man so nur noch eine Möglichkeit für den Roboter einbauen dem Hauptvektor zu folgen.
-Es gibt noch weitere Möglichkeiten, um das Verhalten das Linienerkennungs Programms zu steuern, falls man einen komplexeren Roboter gestallten möchte. beispielsweise kann man in dem man mit setMode den Modus LINE_MODE_MANUAL_SELECT auswählt, die automatische Auswahl der Linie verhindern und so eine feinere Kontrolle über das Verhalten des Roboters bekommen. Außerdem kann mit der Methode getAllFeatures auch einfach einen ungefilterten Blick auf alle möglichen Vektoren, Kreuzungen und Barcodes zu bekommen, um alles komplett selbstständig zu verwalten.
+
+Das Line Programm auf dem Pixy ermöglicht es Linien, Kreuzungen und eine simple Form von Barcodes zu erkennen. Das Interface zu diesem Programm wird von der Klasse Pixy2Line in der gleichnamige .h-Datei implementiert. Die wichtigste Methode dieser Klasse, getMainFeatures, liefert den Vektor der Linie, der der Roboter im Moment folgt, und falls vorhanden, die Abbiegungen und Barcodes, die vorraus sind, zurück. Jede Abbiegungen und jeder Barcodes wird in diesem Normalenmodus nur einemal zurückgegeben, sodass man in der Anwendung nur einmal eine Entscheidung treffen muss und sich nicht merken muss, welche Merkmale man bereits gesehen hat. Welcher Richtung der Roboter an der nächsten Abbiegungen folgen soll, kann man durch die zwei Methoden setNextTurn und setDefaultTurn beeinflusst. Aufgrund des Winkels, der als Argument an setDefaultTurn übergeben wird, entscheidet der Pixy automatisch, welchem Pfad einer Kreuzung er folgen soll, falls er keine anderen Instruktionen bekommt. Diese Entscheidung kann für die als nächstes folgende Kreuzung durch die Methode setNextTurn überschrieben werden, beispielsweise auf Reaktion auf einen Barcode. Um einen einfachen linienfolgenden Roboter selbst zu bauen muss man so nur noch eine Möglichkeit für den Roboter einbauen dem Hauptvektor zu folgen.
+Es gibt noch weitere Möglichkeiten, um das Verhalten das Linienerkennungs Programms zu steuern, falls man einen komplexeren Roboter gestallten möchte. beispielsweise kann man in dem man mit setMode den Modus LINE_MODE_MANUAL_SELECT auswählt, die automatische Auswahl der Linie verhindern und so eine feinere Kontrolle über das Verhalten des Roboters bekommen. Außerdem kann mit der Methode getAllFeatures auch einfach einen ungefilterten Blick auf die Vektoren aller Linien, Kreuzungen und Barcodes zu bekommen und alles komplett selbstständig zu verwalten.
 
 Video
 
-Das Programm Video kann ganze Videoframes übertragen, aber leider nur über USB, also zum Beispiel an einen PC, über die dem Arduino zur Verfügung stehenden Schnittstellen ist dies leider nicht möglich. Deshlalb hat die Pixy2Video Klasse nur eine Funktion um den RGB-Wert eines Pixels oder genau genommen den durchschnitt einer fünf mal fünf großen Pixelgruppe mit dem Zentrum an einer spezifizierten Stelle zu bekommen. Diese Funktion heißt getRGB und soll laut dem Hersteller vorallem benutzt werden, falls die abzufragenden Positionen im vorraus bekannt sind, beispielsweise beim automatisierten lösen eines Rubikscubes, bei dem man nur das Zentrum jeder der 9 uns zugewandten Flächen angesehen werden muss. Theoretisch könnte man auch dieses Problem mit dem Color Connected Components Programm lösen, aber durch die Variante mit dem Video Programm ist das Problem erheblich einfacher zu lösen.
+Das Programm Video kann ganze Videoframes übertragen, aber leider nur über USB, also zum Beispiel an einen PC, über die dem Arduino zur Verfügung stehenden Schnittstellen ist dies leider nicht möglich. Deshlalb hat die Pixy2Video Klasse nur eine Funktion um den RGB-Wert eines Pixels oder genau genommen den durchschnitt einer fünf mal fünf großen Pixelgruppe mit dem spezifizierten Pixel als Zentrum zu bekommen. Diese Funktion heißt getRGB und soll laut dem Hersteller vorallem benutzt werden, falls die abzufragenden Positionen im vorraus bekannt sind, beispielsweise beim automatisierten lösen eines Rubiks Cubes, bei dem man nur das Zentrum jeder der 9 uns zugewandten Flächen angesehen werden muss. Theoretisch könnte man auch dieses Problem mit dem Color Connected Components Programm lösen, aber durch die Variante mit dem Video Programm ist das Problem erheblich einfacher zu lösen.
 
 
-Weitere Funktionalität #FIXME
+Weitere Funktionalität
 
-Die Library beinhaltet auch weiterreichende Funktionalität, beispielsweise eine Implementierung eines PID Reglers, eine Ansteuerung für eines mit PWM kontrollierten Motors und einige Benutzungsbeispiele. Diese weiteren Bestandteile haben wir mit Absicht außen vor gelassen, mit der einfachen Begründung, dass das Projekt sonst bei weitem nicht genügend Umfang gehabt hätte.
-
+Die Library beinhaltet auch weiterreichende Funktionalität, beispielsweise eine Implementierung eines PID Reglers, eine Ansteuerung eines mit PWM kontrollierten Motors und einige Benutzungsbeispiele. 
+Um den Projektumfang nicht weiter zu verringern, haben wir diese weiteren Funktionalitäten allerdings außer Acht gelassen, da ein dreier Team dieser Aufgabe ansonsten nicht angemessen gewesen wäre.
 
 
