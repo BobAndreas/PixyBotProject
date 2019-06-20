@@ -14,6 +14,7 @@ class BoundedPID {
     BoundedPID(PID_Config* config, int initial, int lower, int upper);
     int next(int measured);
     void clearBuf();
+    int getCurrent();
     int setCurrent(int current);
 };
 #endif

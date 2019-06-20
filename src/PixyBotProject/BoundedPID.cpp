@@ -30,3 +30,6 @@ int BoundedPID::next(int measured){
     return setCurrent(potentialNext);
 }
 
+int BoundedPID::getCurrent(){
+    return current;
+}
