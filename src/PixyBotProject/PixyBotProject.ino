@@ -36,6 +36,11 @@ PID* RotationController;
 
 int idleCount = 0;
 
+//for searching mode
+int targetindex;
+int currentX;
+int currentY;
+
 const int TARGETSIZE = 90;
 const int SPEED_FACTOR = 2;
 const int CLEAR_COUNT = 30;
@@ -43,7 +48,7 @@ const int SPEED_LIMIT = 200;
 const int PAN_LIMIT = 1000;
 
 
-int following_x, following_y;
+
 //long timer, lasttimer;
 
 
@@ -128,17 +133,20 @@ void loop()
         TiltController->clearBuf();     //clears buffer
         SpeedController->clearBuf();    //clears buffer
         RotationController->clearBuf(); //clears buffer
-        following_x = 100;
-        following_y = 100;
-          
+        
+        currentX = PanController->getCurrent();
+        currentY = TiltController->getCurrent();
+        targetindex = 0;
         state = Searching;
       }
       break;
     case Searching:
       if (blocks > 0) {
         //update the current value in the controllers because they have been moved in the searching phase
-        PanController->setCurrent(following_x);
-        TiltController->setCurrent(following_y);
+
+        PanController->setCurrent(currentX);
+        TiltControllerq->setCurrent(currentY);
+
         state = Following;
       }
       break;
@@ -218,27 +226,35 @@ void waiting() {
   delay(100);
 }
 
+struct Point
+{
+  int x,y;
+};
+
+Point[] targets = Point[]{ 
+  Point{x: 100, y:100},
+  Point{x: 900, y:100},
+  Point{x: 900, y:500},
+  Point{x: 100, y:500},
+  Point{x: 100, y:900},
+  Point{x: 900, y:900}};
 //search routine to find a block after waiting has been proven futile
 void searching() {
-  pixyCore.setServos(following_x, following_y);
   motorcontrol.drive(0,0);
-  //the search routine moves the pixy camera to different points to search the 
-  //whole field of view of the pixy camera
-  if ( following_x < 900)
-    following_x += 267;
-  else{  
-    if (following_y < 900)
-      following_y += 400;
-    else
-      following_y = 100;
+
+
+  int diffX = limit(targets[targetindex].x - currentX, -20, 20); 
+  int diffY = limit(targets[targetindex].y - currentY, -20, 20);
+
+  currentX = limit(diffX + currentX, 50, 950);
+  currentY = limit(diffY + currentY, 50, 950);
   
-    following_x = 100;
-    //extra delay because the pixy has to travel to the opposite side
-    delay(200);
-    
-  }
-  //wait so that the pixy can pick up a new target
-  delay(500);
+  pixyCore.setServos(currentX, currentY);
+
+  if(currentX == targets[targetindex].x && currentY == targets[targetindex].y)
+    targetindex = (targetindex +1) % 6;
+
+
 
 }
 
