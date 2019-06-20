@@ -2,79 +2,94 @@ GitHub als Teamarbeitstool
 
 Was ist GitHub
 
-GitHub ist eine Online-Plattform die von GitHub inc. entwickelt wurde und vor ca. einem Jahr von Microsoft übernommen wurde. GitHub ist eine zusammengesetztes Wort aus den zwei Teilen Git, einem von Linux Torvalds entwickelten Versionsverwaltungssystem und Hub, also einem Zentralen Punkt, und dieser Neologismus beschreibt die Funktionalität der Plattform sehr treffend.  Der Dienst kombiniert die Möglichkeit ein Git Repository einem großen Team online zur Verfügung zu stellen, mit all den notwendigen Features die benötigt werden effektiv im Team arbeiten zu können.
+GitHub ist eine Online-Plattform die von GitHub inc. entwickelt wurde und vor ca. einem Jahr von Microsoft übernommen wurde. GitHub ist eine zusammengesetztes Wort aus den zwei Teilen Git, einem von Linux Torvalds entwickelten Versionsverwaltungssystem und Hub, also einem Zentralen Punkt, und dieser Neologismus beschreibt die Funktionalität der Plattform sehr treffend.  Der Dienst kombiniert die Möglichkeit ein Git-Repository einem großen Team online zur Verfügung zu stellen, mit all den notwendigen Features die benötigt werden effektiv im Team arbeiten zu können.
 
 Git 
 
-Das Entwicklung des Versionsverwaltungssystem wurde 2005 von dem Entwickler des Linux-Betriebssystems, Linus Torvalds, begonnen, nachdem BitKeeper, das Programm was bis dahin zur Versionsverwaltung für den Linux-Kernel verwendet wurde, kostenpflichtig wurde. Seit dem wird die Entwicklung von einer großen OpenSource Community weiter entwickelt.
+Das Entwicklung des Versionsverwaltungssystem wurde 2005 von dem Entwickler des Linux-Betriebssystems, Linus Torvalds, begonnen, nachdem BitKeeper, das Programm was bis dahin zur Versionsverwaltung für den Linux-Kernel verwendet wurde, kostenpflichtig wurde. Seit dem wird die Entwicklung von einer großen Open Source Community weiter entwickelt.
 
 Zentrale Merkmale
 
 Kein Zentraler Server
-Jeder Entwickler hat eine eigene Kopie des gesammten Projekts. Die Synchronisation erfolgt über die Befehle "Push" und "Pull", wenn die Entwickler bereit sind ihre Zwischenstände abzugleichen. 
+Jeder Entwickler hat eine eigene Kopie des gesamten Projekts. Die Synchronisation erfolgt über die Befehle "Push" und "Pull", wenn die Entwickler bereit sind ihre Zwischenstände abzugleichen. 
 
 Isolierte Entwicklungszweige.
+
 Die Entwicklung verschiedener Features kann in sogenannten Branches erfolgen, die unabhängig von den anderen Zweigen bearbeitet werden können. Ist ein Feature fertiggestellt kann es dann in den Hauptzweig, den Masterbranch, hineingezogen werden.
 
 Commit und Roleback
-Wie bei Datenbanken üblich wird auch bei Git jede Änderung als eine Art von Transaktion betrachtet, die nur übernommen werden, falls der Transaktion ein Commit folgt. Solange die Transaktion noch läuft sind ihre Änderungen nicht für die anderen Benutzer sichtbar. Anders als bei einer Datenbank können die Änderungen aber auch nach einem Commit noch rückgängig werden, da bei jedem Commit nur die Änderungen zum vorherigen Zustand gespeichert werden. Dies erlaubt es sich alle Zwischenstände des Softwareentwicklungsprozesses noch einmal anzusehen und intersessanterweise auch die selben Änderungen auf einen anderen Entwicklungszweig anzuwenden.
+Wie bei Datenbanken üblich wird auch bei Git jede Änderung als eine Art von Transaktion betrachtet, die nur übernommen werden, falls der Transaktion ein Commit folgt. Solange die Transaktion noch läuft sind ihre Änderungen nicht für die anderen Benutzer sichtbar. Anders als bei einer Datenbank können die Änderungen aber auch nach einem Commit noch rückgängig werden, da bei jedem Commit nur die Änderungen zum vorherigen Zustand gespeichert werden. Dies erlaubt es sich alle Zwischenstände des Softwareentwicklungsprozesses noch einmal anzusehen und interessanterweise auch die selben Änderungen auf einen anderen Entwicklungszweig anzuwenden.
 
 Teamfeatures von GitHub 
 
-Issuetracking
-Erlaubt es für Anwender und Entwickler des Codes Probleme in der Codebase anzumerken. Desweiteren können durch die Kommentarfunktion für jeden Issue die genaueren Details des Problems und gegebenefalls Lösungsstrategien diskutiert werden. Wenn ein Problem gelöst ist kann es geschlossen werden. Die in dem Issue und den Kommentaren erhaltenen Informationen bleiben aber erhalten, da sie nicht gelöscht werden und so kann langfristig ein Wissensschatz aufgebaut werden, der hilfreich sein kann, falls ähnliche Probleme auftreten. Desweiteren erstellt GitHub automatisch Statistiken zu der Menge von Issues im Repositories über die Entwicklungszeit.
+Issue-Tracking
+
+Erlaubt es für Anwender und Entwickler des Codes Probleme in der Codebase anzumerken. Des weiteren können durch die Kommentarfunktion für jeden Issue die genaueren Details des Problems und gegebenenfalls Lösungsstrategien diskutiert werden. Wenn ein Problem gelöst ist kann es geschlossen werden. Die in dem Issue und den Kommentaren erhaltenen Informationen bleiben aber erhalten, da sie nicht gelöscht werden und so kann langfristig ein Wissensschatz aufgebaut werden, der hilfreich sein kann, falls ähnliche Probleme auftreten. Außerdem erstellt GitHub automatisch Statistiken zu der Menge von Issues im Repositories über die Entwicklungszeit.
 
 Pullrequests
-GitHub erlaubt es normalerweise nur dem Besitzter eines Repositories auf den Entwicklungszweigen zu schreiben. Diese Rechte können auch auf Beteiligte, sogenannte Contributoren, des Projekts ausgeweitet werden. Alle anderen Benutzer von GitHub können auch an einem öffentlichen Projekt mitarbeiten indem sie einen sogenannten Fork, also eine Weggabelung erstellen. Ein Fork ist ein Clon des bisher existierenden Repository, den sie aber behandeln können, als wäre es ihr eigener Code. Später können Sie dann eine Aufforderung an die Contributoren senden, ihre Änderungen in einen Entwicklungszweig zu übernehmen.
+
+GitHub erlaubt es normalerweise nur dem Besitzter eines Repositories auf den Entwicklungszweigen zu schreiben. Diese Rechte können auch auf Beteiligte, sogenannte Contributoren, des Projekts ausgeweitet werden. Alle anderen Benutzer von GitHub können auch an einem öffentlichen Projekt mitarbeiten indem sie einen sogenannten Fork, auf deutsch eine Weggabelung erstellen. Ein Fork ist ein Clon des bisher existierenden Repository, den sie aber behandeln können,als wäre es ihr eigener Code. Später können Sie dann eine Aufforderung an die Contributoren senden, ihre Änderungen in einen Entwicklungszweig zu übernehmen.
 Diese Aufforderung wird Pullrequest genannt.
 
 Projektmanagment
+
 Um die Aufgabenverteilung in dem Projekt zu regeln bietet GitHub auch Projektmanagmentfeatures an. Die Beinhaltet eine Verwaltung der bekannten Probleme und der bereits fertiggestellt und noch ausstehenden Features an. Außerdem können diese Arbeitspakete an Contributoren zugewiesen werden, um doppelte gemachte Arbeit zu vermeiden. 
 
 Wiki
-Das verwenden des Projekts und auch die Einarbeitung neuer Unterstützer soll durch das Wikifeature von GitHub erleichtert werden. Hier wird es ermöglicht eine umfangreiche Dokumentation in Form eines Wikis zu erstellen, um beispielsweise die Architektur des Projekts zu erläutern, die Zusammenhänge zwischen Modulen des Codes zu verdeutlichen oder häufig gestellte Fragen und wiederkehrende Anwenderfehler zu beantworten beziehungsweise zu lösen.
+
+Das verwenden des Projekts und auch die Einarbeitung neuer Unterstützer soll durch das Wikifeature von GitHub erleichtert werden. Hier wird es möglich eine umfangreiche Dokumentation in Form eines Wikis zu erstellen, um beispielsweise die Architektur des Projekts zu erläutern, die Zusammenhänge zwischen Modulen des Codes zu verdeutlichen oder häufig gestellte Fragen und wiederkehrende Anwenderfehler zu beantworten beziehungsweise zu lösen.
 
 Security
-Ein immer wichtigere Baustein der modernen Softwareentwicklung ist das vermeiden von Sicherheitslücken. Hierbei unterstützt GitHub den Anwender, indem es automatisch auf Sicherheitslücken in Abhängigkeiten des Projektes aufmerksam macht. Außerdem bietet es eine Plattform um Sicherheitsrichtlinien für das Projekt zu definieren und auch bei öffentlichen Projekten die Inhaber des Projektes im Privaten über aufgedeckte Sicherheitslücken zu informieren.
+
+Ein immer wichtigere Baustein der modernen Softwareentwicklung ist das vermeiden von Sicherheitslücken. Hierbei unterstützt GitHub den Anwender, indem es automatisch auf Sicherheitslücken in Abhängigkeiten des Projektes aufmerksam macht. Außerdem bietet es eine Plattform um Sicherheitsrichtlinien für das Projekt zu definieren und auch bei öffentlichen Projekten die Inhaber des Projektes im Privaten über aufgedeckte Sicherheitslücken zu informieren, sodass diese vor dem bekannt werden etwaiger Lücken geschlossen werden können.
 
 Insights
-GitHub bietet den Mitarbeitern des Projekts eine Menge an Informationen bezüglich des Projektes. Es ist unteranderem möglich zu sehen, wie viele Besucher das Projekt hatte, wie oft es herunter geladen wurde. Desweiteren gibt es übersichtliche Grafiken, die zeigen, welche Entwicklungszweige existieren und wie sie zusammenhängen. Außerdem gibt es die Möglichkeit alle Abhängigkeiten des Projektes einzusehen.  
+
+GitHub bietet den Mitarbeitern des Projekts eine Menge an Informationen bezüglich des Repositories. Diese Informationen umfassen sowohl Online-Traffic Statistiken als auch Statistiken zu dem Code selbst. Zu den Traffic Informationen zählen die Besucherzahlen, die Anzahl von Downloads und wohl als wichtigste Metrik, die Anzahl von Forks. Zu der Codebase gibt es Graphen zu den Entwicklungszweigen, den Abhängigkeiten zu externen  Bibliotheken und Frameworks, der Anzahl und dem Umfang der Änderugen der Beteiligten und die Anzahl geöffneter und geschlossener Issues in letzter Zeit.
 
 Wie wir es verwendet haben
 
 Open Source
-Wir entschieden uns dafür unser Projekt als OpenSource Projekt der Allgemeinheit zur Verfügung zu stellen, da wir hoffen, dass das Projekt so nicht nach dem Abschluss der Projektarbeit direkt stirbt, sondern unter umständen von anderen Weiterentwickelt oder von Anfängern, die gerne auch mit Microprozessoren arbeiten wollen als Trittbrett genutzt werden kann, um ihnen den Einstieg zu erleichtern.
-Unser Projekt ist als Opensource Projekt unter General Public License Version 2 verfügbar. Dies hat zwei Gründe. Zum einen ist zwingt uns die License der Pixy Bibliothek unseren Code auch unter der GPLv2 License zu veröffentlichen, falls wir es veröffentlichen wollen. Zum anderen sahen wir es auch als Vorteil, Benutzer unseres Codes dazu zu verpflichten ihre Änderungen auch unter einer offenen Lizens zu veröffentlichen.
+
+Wir entschieden uns dafür unser Projekt als Open Source Projekt der Allgemeinheit zur Verfügung zu stellen, da wir hoffen, dass das Projekt so nicht nach dem Abschluss der Projektarbeit stirbt, sondern unter umständen von anderen Weiterentwickelt oder von Anfängern, die auch gerne mit Microprozessoren arbeiten wollen als Trittbrett genutzt werden kann, um ihnen den Einstieg zu erleichtern.
+Unser Projekt ist als Open Source Projekt unter General Public License Version 2 verfügbar. Dies hat zwei Gründe. Zum einen zwingt uns die License der Pixy Bibliothek unseren Code auch unter der GPLv2 License zu veröffentlichen, wenn wir die Pixybibliothek zusammen mit unserer Software verteilen wollen. Zum anderen war es aber auch eine gewollte Entscheidung, da wir die Verpflichtung
+Veränderungen und etwaige Verbesserungen wieder der Allgemeinheit zur Verfügung zu stellen zu schätzen wissen.
 
 Versionsverwaltung
 
-Wir haben GitHub primär als Versionsverwaltung benutzt, um in dem Fall einer degradierung der Funktionalität einfach die letzten Änderungen nachvollziehen und gegebenefalls komplett rückgängig machen zu können.
+Wir haben GitHub primär als Versionsverwaltung benutzt, um in dem Fall eines Rückganges der Funktionalität einfach die letzten Änderungen nachvollziehen und gegebenenfalls komplett rückgängig machen zu können.
 
-Issue Tracking
+Issue-Tracking
 
-Ein weiteres Feature von dem wir weiten Gebrauch gemacht haben war das Issuetracking. Sobald jemandem Probleme oder Verbesserungspotentiale aufgefallen sind, wurden sie sofort als Issue festgehalten, damit Sie nicht in Vergessenheit geraten.
+Ein weiteres Feature von dem wir Gebrauch gemacht haben war das Issue-Tracking. Sobald jemandem Probleme oder Verbesserungspotentiale aufgefallen sind, wurden sie sofort als Issue festgehalten, damit Sie nicht in Vergessenheit geraten.
+Dies erlaubte uns uns in unserem iterativen Entwicklungsansatz zuerst auf die wichtigsten Probleme zu fokusieren, ohne den Überblick zu verlieren.
 
 Extreme Programming
 
-Extreme Programming, auch bekannt als XP ist ein durch fortlaufende Iterationen strukturiertes Vorgehensmodell. Diese Methode ist aus der Realisierung entstanden, das in den meisten Softwareprojekten nicht alle Anforderungen eindeutig bekannt sind und es im vorraus auch von der Entwicklerseite nicht immer realistisch möglich ist, alle Hürden abzuschätzen. XP stellt die Teamarbeit, Offenheit und stete Kommunikation zwischen den Mitarbeitern aber auch dem Kunden in den Vordergrund. Im Extreme Programming werden in dem Iterativen Prozess immer wieder lauffähige Prototypen erstellt, die komplett getestet werden können und benutzt werden können um mit dem Kunden über die Künftige Ausrichtung der Entwicklung zu sprechen. Dann werden die gewünschten Änderungswünsche und aufgedeckten Fehler in der nächsten Iteration adressiert und ein neuer lauffähige Variante erstellt. Dies stellt sicher, dass der Kunde stehts ein Bild von der laufenden Entwicklung hat und auch falls das Projekt vorzeitig abgebrochen wird, fast immer ein lauffähiges Programm, was zumindest einen Teil der Anforderungen erfüllt, zur Verfügung steht.
+Extreme Programming, auch bekannt als XP ist ein durch fortlaufende Iterationen strukturiertes Vorgehensmodell. Diese Methode ist aus der Realisierung entstanden, das in den meisten Softwareprojekten nicht alle Anforderungen eindeutig bekannt sind und es im voraus auch von der Entwicklerseite nicht immer realistisch möglich ist, alle Hürden abzuschätzen. XP stellt die Teamarbeit, Offenheit und stete Kommunikation zwischen den Mitarbeitern aber auch dem Kunden in den Vordergrund. Im Extreme Programming werden in dem iterativen Prozess immer wieder lauffähige Prototypen erstellt, die komplett getestet werden können und benutzt werden können um mit dem Kunden über die Künftige Ausrichtung der Entwicklung zu sprechen. Dann werden die gewünschten Änderungswünsche und aufgedeckten Fehler in der nächsten Iteration adressiert und ein neuer lauffähige Prototyp erstellt. Dies stellt sicher, dass der Kunde stets ein Bild von der laufenden Entwicklung hat und auch falls das Projekt vorzeitig abgebrochen wird, fast immer ein lauffähiges Programm, was zumindest einen Teil der Anforderungen erfüllt, zur Verfügung steht. Zu den wichtigsten Praktiken des Extreme Programming die wir verwendet haben gehören die folgenden:
+
+Iterationen
+
+Kurze Iterationen sind wichtig, um in regelmäßigen Zeitabständen einen lauffähigen Zwischenstand des Produkts zu liefern. Eine Iteration ist eine zeitlich und fachlich in sich abgeschlossene Einheit. Kurze Iterationen und die damit verbundenen Akzeptanztests erlauben eine schnelle Feedbackschleife zwischen Entwicklung und Kunde.
 
 Pair-Programming
 
-Paar Programmierung ist eine Methode des XP die darauf abziehlt den Wissensaustausch und die Codequalität sicherzustellen. Im normalen Ablauf sitzt einer am Rechner und einer erklärt, was er umsetzen möchte und wie. Dies ist nicht als Diktat zu verstehen, sondern als tatsächliche Erklärung, bei der jenige am Rechner bei Unklarheiten nachfrage oder fragwürdigen Entscheidungen hinterfragen kann. Dies führt dazu, dass es immer mindestens zwei Programmierer gibt, die eine gewissen Abschnitt des Codes verstehen. Dies hat zur folge, dass das Team weniger anfällig für Wissensverlust durch den Verlusst von Mitarbeitern ist und die Codequalität höher gehalten wird. Dies führt langfristig zu einer höheren Produktivität, auch wenn scheinbar der doppelte Personalaufwand betrieben wird.
-
+Paar Programmierung ist eine Methode des XP die darauf abzielt den Wissensaustausch und die Codequalität sicherzustellen. Im normalen Ablauf sitzt ein Programmierer am Rechner und ein anderer erklärt, was er umsetzen möchte und wie. Dies ist nicht als Diktat zu verstehen, sondern als tatsächliche Erklärung, bei der derjenige am Rechner bei Unklarheiten nachfragen oder fragwürdigen Entscheidungen hinterfragen kann. Dies führt dazu, dass es immer mindestens zwei Programmierer gibt, die einen gewissen Abschnitt des Codes verstehen. Außerdem wird in diesem Prozess ein konstanter Wissensaustausch angeregt. Dies Entwicklungsansatz hat zur Folge, dass das Team weniger anfällig für Wissensverlust durch den Verlusst von einzelnen Mitarbeitern ist und die Codequalität höher gehalten wird durch das Vier-Augen-Prinzip. Dies führt langfristig zu einer erhöhten Produktivität, auch wenn scheinbar der doppelte Personalaufwand betrieben wird.
 
 Kollektives Eigentum
+
 Das ganze Team ist für den ganzen Code verantwortlich. Durch die konstante Teilung von Wissen durch hohe Kommunikation und Methoden wie Pair-Programming und wechselnde Arbeitsgebiete wird verhindert, dass sich Code in der Einzelverantwortung von einem Mitglied des Teams befindet.
 
 Permanente Integration
+
 Das Gesamtsystem soll ständig aus allen Teilen zusammengesetzt und ausgeführt werden. Dies führt zu der frühen Aufdeckung von Fehlern in der Interaktion und Funktionalität der Module, die sonst bis spät in den Entwicklungsprozess unentdeckt bleiben könnten. Da diese Integration ständig passieren soll, muss dieser Schritt so weit wie möglich automatisiert werden.
 
 Permanentes Testen
-Ein wichtiger Schritt in jedem Entwicklungszyklus sind Tests. Im Extreme Programming wird das Projekt nicht erst nach der Fertigstellung des Projekts sondern durchgehend getestet. Im Normalfall werden nach jeder Änderung automatische Tests durchgeführt. Dies soll davor schützen bereits geschaffene Funktionalität wieder zerstört wird und das diese negativen Änderungen leichter ausfindig und korrigiert werden können. Diese Test werden dann noch gefolgt von einem Akzeptanztest durch den Auftrageber am Ende von jedem Zyklus.
-Ein sonderfall hiervon ist das Test Driven Development, auf deutsch testgetriebene Entwicklung oder auch TDD. Bei diesem Ansatz wird bevor eine Codeeinheit codiert wird erst ein oder mehrere Testfälle verfasst, die beim Status quo fehlschlagen würden. Dann wird die simpelste Lösung verfasst, die alle diese Testfälle erfüllt und dann ein Refactoring ausgeführt. In der Theorie soll dieser Ansatz den Vorteil haben, dass der Entwickler mehr über seinen Code nachdenkt. Insbesondere auch über das öffentliche Interface, da er dieses in seinen Testsfällen auch selbst benutzen muss.
+
+Ein wichtiger Schritt in jedem Entwicklungszyklus sind Tests. Im Extreme Programming wird das Projekt nicht erst nach der Fertigstellung des Projekts sondern durchgehend getestet. Im Normalfall werden nach jeder Änderung automatische Tests durchgeführt. Dies soll davor schützen bereits geschaffene Funktionalität wieder zerstört wird und das diese negativen Änderungen leichter ausfindig gemacht und korrigiert werden können. Diese Test werden dann noch gefolgt von einem Akzeptanztest durch den Auftrageber am Ende von jedem Zyklus.
+Ein Sonderfall hiervon ist das Test Driven Development, auf deutsch testgetriebene Entwicklung oder auch TDD. Bei diesem Ansatz wird bevor eine Codeeinheit geschrieben wird erst ein oder mehrere Testfälle verfasst, die beim Status quo fehlschlagen würden. Dann wird die simpelste Lösung verfasst, die alle diese Testfälle erfüllt und dann ein Refactoring ausgeführt. In der Theorie soll dieser Ansatz den Vorteil haben, dass der Entwickler mehr über seinen Code nachdenkt. Insbesondere auch über das öffentliche Interface, da er dieses in seinen Testfällen auch selbst benutzen muss.
 
 Refactoring
-Ein wichtiger Teil des Iterativen Ansatzes ist, dass der gesammte Code einem ständigen Review unterworfen ist und gegebenefalls angepasst wird. Dies entstammt der Realisierung, dass Code selten von Begin an in der Besten vorm verfasst wird, vor allem wenn man die Prototypen basierte Natur des Extreme Programming Prozesses bedenkt.
 
-Iterationen
-Kurze Iterationen, um dem Kunden in regelmäßigen Zeitabständen einen lauffähigen Zwischenstand des Produkts zu liefern. Eine Iteration ist eine zeitlich und fachlich in sich abgeschlossene Einheit. Kurze Iterationen und damit verbundene Akzeptanztests erlauben schnelle Feedbackschleifen zwischen Entwicklung und Kunde.
+Ein wichtiger Teil des Iterativen Ansatzes ist, dass der gesamte Code einem ständigen Review unterworfen ist und gegebenenfalls angepasst wird. Dies entstammt der Realisierung, dass Code selten von Begin an in der besten Form verfasst wird, vor allem wenn man die Prototypen basierte Natur des Extreme Programming Prozesses bedenkt. 
+
