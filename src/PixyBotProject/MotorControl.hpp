@@ -20,7 +20,7 @@ struct MotorConfig{
   uint8_t speedPin;
   uint8_t forwardPin;
   uint8_t backwardPin;
-}
+};
 
 class Motor;
 
