@@ -11,6 +11,8 @@ struct PID_Config {
         
 };
 
+int limit(int value, int lowerBound, int upperBound);
+
 class PID{
   
   public:
