@@ -124,6 +124,7 @@ void loop()
       } 
       else if (idleCount > CLEAR_COUNT) {
         idleCount = 0;
+        PanController->clearBuf();      //clears buffer
         TiltController->clearBuf();     //clears buffer
         SpeedController->clearBuf();    //clears buffer
         RotationController->clearBuf(); //clears buffer
@@ -186,9 +187,6 @@ void following(uint16_t blocks) {
   //side length.
   int perceivedsize = max(current.m_height, current.m_width);
 
-  ////Serial.println("Combined: ");
-  //printBlock(&current);  
-
   //feed Infos to the relevant controllers
   tilt = TiltController->next(current.m_y);
   pan = PanController->next(current.m_x);
@@ -213,7 +211,7 @@ void following(uint16_t blocks) {
 
 }
 
-//idleing bevor taking further actions when no blocks are detected
+//idleing before taking further actions when no blocks are detected
 void waiting() {
   idleCount++;
   motorcontrol.drive(0,0);
