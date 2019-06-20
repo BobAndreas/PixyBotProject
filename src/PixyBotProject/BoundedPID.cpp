@@ -12,23 +12,16 @@ BoundedPID::BoundedPID(PID_Config* config, int initial, int lower, int upper){
 void BoundedPID::clearBuf(){
     pid->clearBuf();
 }
-/*
+
 //restricts the setting for current to not exeed hardware restrictions (e.g. Pixy2 Pan/Tilt servomotors)
 int BoundedPID::setCurrent(int value){
-    if(value > upperBound)
-        current = upperBound;
-    else if(value < lowerBound)
-        current = lowerBound;
-    else
-        current = value;
-    return current;    
-}*/
+    return current = limit(value, lowerBound, upperBound);    
+}
 
 //returns next value with restrictions from setCurrent()
 int BoundedPID::next(int measured){
     int potentialNext = pid->next(measured) + current;
-    current = limit(potentialNext, lowerBound, upperBound);
-    return current;
+    return setCurrent(potentialNext);
 }
 
 int BoundedPID::getCurrent(){
