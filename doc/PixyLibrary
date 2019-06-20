@@ -66,7 +66,10 @@ Pixy2I2C  |  I2C
 Pixy2SPI_SS.h  |  SPI mit mehreren Slaves die über slave select
 Pixy2UART.h  |  UART
 
-Kommunikationsprotokolle erläutern #TODO???
+Das Kommunikationsprotokoll SPI ist für den Pixy als Standardkommunikationsprotokoll vorgesehen, was sich auch in der Bennenung des Aliases Pixy2 für TPixy2<Link2SPI> wiederfindet. Da dieses Protokoll auch in diesem Projekt Verwendung finden wird, soll dieses Protokoll einmal genauer beschrieben werden.
+
+SPI steht für Serial Peripheral Interface und ist ein ziemlich lockeres synchrones serieles Datenprotokoll. Das Protokoll ist für eine Master-Slave Kommunikation vorgesehen. Das Grundlegende Protokoll beinhaltet nur drei Kommunikationsleitungen. Eine davon ist die Taktleitung, mit der der Master den Takt für die Hin- und Rückleitung vorgiebt. Diese wird meist mit SCK für Serial Clock beschrieben. Für die Kommunikation vom Master zum Client wird die sogenannte MOSI Leitung verwendet, was für Master Out Slave In steht. Für die Rückleitung verwendet der Client die sogenannte MISO, Master In Slave Out, Leitung. Da Master und Slave über zwei getrennte Leitungen kommunizieren ist dieses Protokoll voll Duplex fähig. Da der Protokollstandard allerdings sehr lose ist, gilt es einige implementierungsabhängige Feinheiten zu beachten, die von Gerät zu Gerät variieren können. Die wichtigsten von diesen Unterschieden sind die Frequenz der Kommunikation, ob das Most Significant Bit(Bit mit dem höchsten Stellenwert) oder das Least Significant (Bit mit dem niedrigsten Stellenwert) zuerst übertragenwird und der SPI Modus. Der SPI Modus ist eine Kombination aus der Polarität des Taktgebers, also ab eine 0 oder eine 1 auf der Taktleitung als logische 1 interpretiert wird und der Taktphase, die angibt, ob bei einer steigenden oder einer fallenden Flanke des Taktes ein Bit gesendet oder gelesen wird. Die Zahl kann dabei als dezimal Darstellung der Bitkombination von Polarität interpretiert werden.
+Die Pixykommunikation wird bei einem Takt von 20 MHz, Most Significant Bit zuerst und in dem SPI Modus 3 betrieben.
 
 
 Interface für Programme auf dem Pixy
