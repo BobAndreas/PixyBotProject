@@ -231,7 +231,7 @@ struct Point
   int x,y;
 };
 
-Point[] targets = { 
+Point targets [] = { 
   Point{x: 100, y:100},
   Point{x: 900, y:100},
   Point{x: 900, y:366},
