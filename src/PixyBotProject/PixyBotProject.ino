@@ -254,7 +254,7 @@ void searching() {
   pixyCore.setServos(currentX, currentY);
 
   if(currentX == targets[targetindex].x && currentY == targets[targetindex].y)
-    targetindex = (targetindex +1) % (sizeof(target) / sizeof(Point));
+    targetindex = (targetindex +1) % (sizeof(targets) / sizeof(Point));
 
 }
 
