@@ -1,0 +1,100 @@
+TeamArbeit: 
+
+Was ist Github
+    Zentrale Merkmale von Git
+        Kein Zentraler Server
+        Isolierte Entwicklungszweige.
+        Commit und Roleback
+    Teamfeatures
+        Issue-Tracking
+        Pullrequests
+        Projektmanagment
+        Wiki
+        Security
+        Insights
+
+Wie wir es verwendet haben
+
+    Opensource
+        Langlebigkeit
+        Nutzen für andere
+        GPL v2
+
+    Versionsverwaltung
+        Alle auf einem Stand
+        Nachvollziehen von negativen Änderungen
+        Wiederherstellen von bekannten lauffähigen Zwischenständen
+
+Extreme Programming
+    Grundidee
+        Iterativer Prozess
+        Lauffähige Prototypen
+        Durchgehende Kommunikation
+    Common Practices
+        Iterationen
+        Pair-Programming
+        Kollektives Eigentum
+        Permanentes Testen
+        Refactoring 
+
+
+Pixybibliothek
+
+Kernstück: TPixy
+
+    Kernfunktionalität
+        Senden
+        Empfangen
+    geteilte Funktionalität
+        Informationen bekommen
+            Version
+            Framerate
+            Auflösung
+        Befehle senden
+            Kamerabelichtung
+            Steuerung der Servos
+            Steuern der LED-Beleuchtung
+
+Unterstützte Kommunikationsprotokolle
+SPI
+SPI mit Slave Select
+I²C
+UART
+
+Serial Peripheral Interface
+    synchron
+    seriell
+    Leitungen
+        Serial Clock (SCK)
+        Master in, Slave out (MOSI)
+        Master out, Slave in (MISO)
+    Freiheiten
+        Kommunikationsfrequenz
+        Most Significant Bit first
+        Polarität und Phase des Taktgebers (SPI Modus)
+
+
+Programmwrapper
+    Color Connected Components
+    Line
+    Video
+
+Weitere Funktionalität
+    -Implementierung eines PID Reglers
+    -Motoransteuerung für PWM-Motoren
+    -Benutzungsbeispiele
+
+Ansteuerung der Motoren
+
+Physische Ansteuerung
+    Analog
+    Zwei Digitalpins
+
+Motorcontrol als öffentliches Interface
+    Aufbau
+    Vorteile
+
+Motor-Klasse
+    Hysterese Schaltung
+    Schaltung der Ausgänge
+
