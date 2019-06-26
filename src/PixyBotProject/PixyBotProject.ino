@@ -231,7 +231,7 @@ struct Point
   int x,y;
 };
 
-Point[] targets = { 
+Point targets [] = { 
   Point{x: 100, y:100},
   Point{x: 900, y:100},
   Point{x: 900, y:366},
@@ -254,7 +254,7 @@ void searching() {
   pixyCore.setServos(currentX, currentY);
 
   if(currentX == targets[targetindex].x && currentY == targets[targetindex].y)
-    targetindex = (targetindex +1) % (sizeof(target) / sizeof(Point));
+    targetindex = (targetindex +1) % (sizeof(targets) / sizeof(Point));
 
 }
 
